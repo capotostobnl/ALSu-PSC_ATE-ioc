@@ -1,0 +1,303 @@
+record(stringout,"$(P)IP:Settings-SP"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"IP Address:Port #")
+}
+
+record(bo, "$(P)CAL:State-SP") {
+    field(DESC, "Set CAL OFF or ON")
+    field(ZNAM,"OFF")
+    field(ONAM,"ON")
+    field(VAL, "0")
+}
+
+record(bo, "$(P)CH1:Mode-SP") {
+    field(DESC, "Set CH1 Mode to TEST or CAL")
+    field(ZNAM,"TEST")
+    field(ONAM,"CAL")
+    field(VAL, "0")
+}
+
+record(bo, "$(P)CH2:Mode-SP") {
+    field(DESC, "Set CH2 Mode to TEST or CAL")
+    field(ZNAM,"TEST")
+    field(ONAM,"CAL")
+    field(VAL, "0")
+}
+
+record(bo, "$(P)CH3:Mode-SP") {
+    field(DESC, "Set CH3 Mode to TEST or CAL")
+    field(ZNAM,"TEST")
+    field(ONAM,"CAL")
+    field(VAL, "0")
+}
+
+record(bo, "$(P)CH4:Mode-SP") {
+    field(DESC, "Set CH4 mode to TEST or CAL")
+    field(ZNAM,"TEST")
+    field(ONAM,"CAL")
+    field(VAL, "0")
+}
+
+record(mbbo, "$(P)DCCT:Fault:Channel-SP") {
+    field(DESC, "Set CH1 OFF or ON")
+    field(ZRST,"NONE")
+    field(ONST,"CH1")
+    field(TWST,"CH2")
+    field(THST,"CH3")
+    field(FRST,"CH4")
+    field(ZRVL,"0")
+    field(ONVL,"1")
+    field(TWVL,"2")
+    field(THVL,"3")
+    field(FRVL,"4")
+}
+
+record(mbbo, "$(P)Ignd:Channel-SP") {
+    field(DESC, "Set CH1 OFF or ON")
+    field(ZRST,"CH1")
+    field(ONST,"CH2")
+    field(TWST,"CH3")
+    field(THST,"CH4")
+    field(ZRVL,"1")
+    field(ONVL,"2")
+    field(TWVL,"3")
+    field(THVL,"4")
+}
+
+record(mbbo, "$(P)CH1:Fault-SP") {
+    field(DESC, "Set CH1 Fault")
+    field(ZRST,"FLT1")
+    field(ONST,"FLT2")
+    field(TWST,"Spare")
+    field(ZRVL,"1")
+    field(ONVL,"2")
+    field(TWVL,"3")
+}
+
+record(mbbo, "$(P)CH2:Fault-SP") {
+    field(DESC, "Set CH2 Fault")
+    field(ZRST,"FLT1")
+    field(ONST,"FLT2")
+    field(TWST,"Spare")
+    field(ZRVL,"1")
+    field(ONVL,"2")
+    field(TWVL,"3")
+}
+
+record(mbbo, "$(P)CH3:Fault-SP") {
+    field(DESC, "Set CH3 Fault")
+    field(ZRST,"FLT1")
+    field(ONST,"FLT2")
+    field(TWST,"Spare")
+    field(ZRVL,"1")
+    field(ONVL,"2")
+    field(TWVL,"3")
+}
+
+record(mbbo, "$(P)CH4:Fault-SP") {
+    field(DESC, "Set CH4 Fault")
+    field(ZRST,"FLT1")
+    field(ONST,"FLT2")
+    field(TWST,"Spare")
+    field(ZRVL,"1")
+    field(ONVL,"2")
+    field(TWVL,"3")
+}
+
+record(ai,"$(P)DCCT:P15V:14-I"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ai,"$(P)DCCT:N15V:14-I"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ai,"$(P)DCCT:P15V:58-I"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ai,"$(P)DCCT:N15V:58-I"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH1:Vmon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH1:Imon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH2:Vmon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH2:Imon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH3:Vmon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH3:Imon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH4:Vmon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH4:Imon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CAL:DAC-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)Ignd-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P)Readback:Status-I"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(waveform, "$(P)Tester2:CMD-I"){
+  field(DTYP,"Soft Channel")
+  field(FTVL,"CHAR")
+  field(NELM,"30")
+}
+
+record(aSub,"$(P)Tester-Sub"){
+    field(SNAM,"Tester")
+    field(SCAN,".5 second")
+
+    field(FTA,  "STRING")
+    field(NOA,  "60")
+    field(INPA, "$(P)IP:Settings-SP")
+
+    field(FTE,  "LONG")
+    field(NOE,  "1")
+    field(INPE, "$(P)CAL:State-SP.VAL")
+    field(FTF,  "LONG")
+    field(NOF,  "1")
+    field(INPF, "$(P)CH1:Mode-SP.VAL")
+    field(FTG,  "LONG")
+    field(NOG,  "1")
+    field(INPG, "$(P)CH2:Mode-SP.VAL")
+    field(FTH,  "LONG")
+    field(NOH,  "1")
+    field(INPH, "$(P)CH3:Mode-SP.VAL")
+    field(FTI,  "LONG")
+    field(NOI,  "1")
+    field(INPI, "$(P)CH4:Mode-SP.VAL")
+    field(FTJ,  "LONG")
+    field(NOJ,  "1")
+    field(INPJ, "$(P)DCCT:Fault:Channel-SP.RVAL")
+    field(FTK,  "LONG")
+    field(NOK,  "1")
+    field(INPK, "$(P)Ignd:Channel-SP.RVAL")
+    field(FTL,  "FLOAT")
+    field(NOL,  "1")
+    field(INPL, "$(P)Ignd-SP")
+    field(FTM,  "FLOAT")
+    field(NOM,  "1")
+    field(INPM, "$(P)CH1:Vmon:Gain-SP")
+    field(FTN,  "FLOAT")
+    field(NON,  "1")
+    field(INPN, "$(P)CH2:Vmon:Gain-SP")
+    field(FTO,  "FLOAT")
+    field(NOO,  "1")
+    field(INPO, "$(P)CH3:Vmon:Gain-SP")
+    field(FTP,  "FLOAT")
+    field(NOP,  "1")
+    field(INPP, "$(P)CH4:Vmon:Gain-SP")
+    field(FTQ,  "FLOAT")
+    field(NOQ,  "1")
+    field(INPQ, "$(P)CH1:Imon:Gain-SP")
+    field(FTR,  "FLOAT")
+    field(NOR,  "1")
+    field(INPR, "$(P)CH2:Imon:Gain-SP")
+    field(FTS,  "FLOAT")
+    field(NOS,  "1")
+    field(INPS, "$(P)CH3:Imon:Gain-SP")
+    field(FTT,  "FLOAT")
+    field(NOT,  "1")
+    field(INPT, "$(P)CH4:Imon:Gain-SP")
+    field(FTU,  "CHAR")
+    field(NOU,  "30")
+    field(INPU, "$(P)Tester2:CMD-I")
+
+    field(FTVA,  "FLOAT")
+    field(NOVA,  "1")
+    field(OUTA, "$(P)DCCT:P15V:14-I PP")
+    field(FTVB,  "FLOAT")
+    field(NOVB,  "1")
+    field(OUTB, "$(P)DCCT:N15V:14-I PP")
+    field(FTVC,  "FLOAT")
+    field(NOVC,  "1")
+    field(OUTC, "$(P)DCCT:P15V:58-I PP")
+    field(FTVD,  "FLOAT")
+    field(NOVD,  "1")
+    field(OUTD, "$(P)DCCT:N15V:58-I PP")
+    field(FTVE,  "LONG")
+    field(NOVE,  "1")
+    field(OUTE, "$(P)Readback:Status-I PP")
+}
+
+record(aSub,"$(P)Tester2-Sub"){
+    field(SNAM,"Tester2")
+    field(SCAN,".5 second")
+
+    field(FTA,  "LONG")
+    field(NOA,  "1")
+    field(INPA, "$(P)CH1:Fault-SP.RVAL")
+    field(FTB,  "LONG")
+    field(NOB,  "1")
+    field(INPB, "$(P)CH2:Fault-SP.RVAL")
+    field(FTC,  "LONG")
+    field(NOC,  "1")
+    field(INPC, "$(P)CH3:Fault-SP.RVAL")
+    field(FTD,  "LONG")
+    field(NOD,  "1")
+    field(INPD, "$(P)CH4:Fault-SP.RVAL")
+    field(FTE,  "FLOAT")
+    field(NOE,  "1")
+    field(INPE, "$(P)CAL:DAC-SP")
+
+    field(FTVA,  "CHAR")
+    field(NOVA,  "30")
+    field(OUTA, "$(P)Tester2:CMD-I")
+}

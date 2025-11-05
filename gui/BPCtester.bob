@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-09-02 11:39:16 by diag-->
+<display version="2.0.0">
+  <name>BPCtester</name>
+  <width>730</width>
+  <height>830</height>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_72</name>
+    <x>4</x>
+    <y>52</y>
+    <width>696</width>
+    <height>615</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_55</name>
+    <x>151</x>
+    <y>237</y>
+    <width>184</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_52</name>
+    <x>85</x>
+    <y>65</y>
+    <width>277</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_1</name>
+    <pv_name>$(P)DCCT:Fault:Channel-SP</pv_name>
+    <x>89</x>
+    <y>68</y>
+    <width>270</width>
+    <height>69</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <items>
+      <item>NONE</item>
+      <item>CH1</item>
+      <item>CH2</item>
+      <item>CH3</item>
+      <item>CH4</item>
+    </items>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_53</name>
+    <x>84</x>
+    <y>151</y>
+    <width>222</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_2</name>
+    <pv_name>$(P)Ignd:Channel-SP</pv_name>
+    <x>87</x>
+    <y>154</y>
+    <width>217</width>
+    <height>69</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <items>
+      <item>CH1</item>
+      <item>CH2</item>
+      <item>CH3</item>
+      <item>CH4</item>
+    </items>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_7</name>
+    <pv_name>$(P)Ignd-SP</pv_name>
+    <x>380</x>
+    <y>152</y>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_133</name>
+    <text>+15V14</text>
+    <x>506</x>
+    <y>65</y>
+    <width>80</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_119</name>
+    <pv_name>$(P)DCCT:P15V:14-I</pv_name>
+    <x>590</x>
+    <y>65</y>
+    <height>25</height>
+    <format>1</format>
+    <precision>5</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_134</name>
+    <text>-15V14</text>
+    <x>506</x>
+    <y>95</y>
+    <width>80</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_120</name>
+    <pv_name>$(P)DCCT:N15V:14-I</pv_name>
+    <x>590</x>
+    <y>95</y>
+    <height>25</height>
+    <format>1</format>
+    <precision>5</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_135</name>
+    <text>+15V58</text>
+    <x>506</x>
+    <y>125</y>
+    <width>80</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_121</name>
+    <pv_name>$(P)DCCT:P15V:58-I</pv_name>
+    <x>590</x>
+    <y>125</y>
+    <height>25</height>
+    <format>1</format>
+    <precision>5</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_152</name>
+    <text>-15V58</text>
+    <x>506</x>
+    <y>155</y>
+    <width>80</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_138</name>
+    <pv_name>$(P)DCCT:N15V:58-I</pv_name>
+    <x>590</x>
+    <y>155</y>
+    <height>25</height>
+    <format>1</format>
+    <precision>5</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_154</name>
+    <text>Vmon Gain</text>
+    <x>156</x>
+    <y>243</y>
+    <width>90</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_155</name>
+    <text>Imon Gain</text>
+    <x>156</x>
+    <y>278</y>
+    <width>90</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_8</name>
+    <pv_name>$(P)CH1:Vmon:Gain-SP</pv_name>
+    <x>250</x>
+    <y>243</y>
+    <width>80</width>
+    <height>30</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_9</name>
+    <pv_name>$(P)CH1:Imon:Gain-SP</pv_name>
+    <x>250</x>
+    <y>278</y>
+    <width>80</width>
+    <height>30</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_163</name>
+    <text>CH1</text>
+    <x>15</x>
+    <y>238</y>
+    <width>62</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_56</name>
+    <x>81</x>
+    <y>237</y>
+    <width>66</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_4</name>
+    <pv_name>$(P)CH1:Mode-SP</pv_name>
+    <x>85</x>
+    <y>241</y>
+    <width>58</width>
+    <height>68</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <horizontal>false</horizontal>
+    <items>
+      <item>TEST</item>
+      <item>CAL</item>
+    </items>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_60</name>
+    <x>151</x>
+    <y>322</y>
+    <width>184</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_167</name>
+    <text>Vmon Gain</text>
+    <x>156</x>
+    <y>328</y>
+    <width>90</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_168</name>
+    <text>Imon Gain</text>
+    <x>156</x>
+    <y>363</y>
+    <width>90</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_18</name>
+    <pv_name>$(P)CH2:Vmon:Gain-SP</pv_name>
+    <x>250</x>
+    <y>328</y>
+    <width>80</width>
+    <height>30</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_19</name>
+    <pv_name>$(P)CH2:Imon:Gain-SP</pv_name>
+    <x>250</x>
+    <y>363</y>
+    <width>80</width>
+    <height>30</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_169</name>
+    <text>CH2</text>
+    <x>15</x>
+    <y>323</y>
+    <width>62</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_62</name>
+    <x>81</x>
+    <y>322</y>
+    <width>66</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_8</name>
+    <pv_name>$(P)CH2:Mode-SP</pv_name>
+    <x>85</x>
+    <y>326</y>
+    <width>58</width>
+    <height>68</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <horizontal>false</horizontal>
+    <items>
+      <item>TEST</item>
+      <item>CAL</item>
+    </items>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_63</name>
+    <x>151</x>
+    <y>407</y>
+    <width>184</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_170</name>
+    <text>Vmon Gain</text>
+    <x>156</x>
+    <y>413</y>
+    <width>90</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_171</name>
+    <text>Imon Gain</text>
+    <x>156</x>
+    <y>448</y>
+    <width>90</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_20</name>
+    <pv_name>$(P)CH3:Vmon:Gain-SP</pv_name>
+    <x>250</x>
+    <y>413</y>
+    <width>80</width>
+    <height>30</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_21</name>
+    <pv_name>$(P)CH3:Imon:Gain-SP</pv_name>
+    <x>250</x>
+    <y>448</y>
+    <width>80</width>
+    <height>30</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_172</name>
+    <text>CH3</text>
+    <x>15</x>
+    <y>408</y>
+    <width>62</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_65</name>
+    <x>81</x>
+    <y>407</y>
+    <width>66</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_10</name>
+    <pv_name>$(P)CH3:Mode-SP</pv_name>
+    <x>85</x>
+    <y>411</y>
+    <width>58</width>
+    <height>68</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <horizontal>false</horizontal>
+    <items>
+      <item>TEST</item>
+      <item>CAL</item>
+    </items>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_66</name>
+    <x>151</x>
+    <y>492</y>
+    <width>184</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_173</name>
+    <text>Vmon Gain</text>
+    <x>156</x>
+    <y>498</y>
+    <width>90</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_174</name>
+    <text>Imon Gain</text>
+    <x>156</x>
+    <y>533</y>
+    <width>90</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_22</name>
+    <pv_name>$(P)CH4:Vmon:Gain-SP</pv_name>
+    <x>250</x>
+    <y>498</y>
+    <width>80</width>
+    <height>30</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_23</name>
+    <pv_name>$(P)CH4:Imon:Gain-SP</pv_name>
+    <x>250</x>
+    <y>533</y>
+    <width>80</width>
+    <height>30</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_175</name>
+    <text>CH4</text>
+    <x>15</x>
+    <y>493</y>
+    <width>62</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_68</name>
+    <x>81</x>
+    <y>492</y>
+    <width>66</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_12</name>
+    <pv_name>$(P)CH4:Mode-SP</pv_name>
+    <x>85</x>
+    <y>496</y>
+    <width>58</width>
+    <height>68</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <horizontal>false</horizontal>
+    <items>
+      <item>TEST</item>
+      <item>CAL</item>
+    </items>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_24</name>
+    <pv_name>$(P)CAL:DAC-SP</pv_name>
+    <x>225</x>
+    <y>578</y>
+    <width>150</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <format>1</format>
+    <precision>6</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_70</name>
+    <x>80</x>
+    <y>577</y>
+    <width>66</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_13</name>
+    <pv_name>$(P)CAL:State-SP</pv_name>
+    <x>84</x>
+    <y>581</y>
+    <width>58</width>
+    <height>68</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <horizontal>false</horizontal>
+    <items>
+      <item>OFF</item>
+      <item>ON</item>
+    </items>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_178</name>
+    <text>CAL</text>
+    <x>15</x>
+    <y>578</y>
+    <width>62</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_179</name>
+    <text>PSC AUTOMATED TESTER</text>
+    <x>6</x>
+    <y>12</y>
+    <width>260</width>
+    <height>35</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>2</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_73</name>
+    <x>403</x>
+    <y>237</y>
+    <width>169</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_15</name>
+    <pv_name>$(P)CH1:Fault-SP</pv_name>
+    <x>407</x>
+    <y>240</y>
+    <width>163</width>
+    <height>69</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <items>
+      <item>FLT1</item>
+      <item>FLT2</item>
+      <item>Spare</item>
+    </items>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_181</name>
+    <text>CH1
+Fault</text>
+    <x>339</x>
+    <y>238</y>
+    <width>60</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_74</name>
+    <x>403</x>
+    <y>322</y>
+    <width>169</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_16</name>
+    <pv_name>$(P)CH2:Fault-SP</pv_name>
+    <x>407</x>
+    <y>325</y>
+    <width>163</width>
+    <height>69</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <items>
+      <item>FLT1</item>
+      <item>FLT2</item>
+      <item>Spare</item>
+    </items>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_182</name>
+    <text>CH2
+Fault</text>
+    <x>339</x>
+    <y>323</y>
+    <width>60</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_75</name>
+    <x>403</x>
+    <y>407</y>
+    <width>169</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_17</name>
+    <pv_name>$(P)CH3:Fault-SP</pv_name>
+    <x>407</x>
+    <y>410</y>
+    <width>163</width>
+    <height>69</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <items>
+      <item>FLT1</item>
+      <item>FLT2</item>
+      <item>Spare</item>
+    </items>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_183</name>
+    <text>CH3
+Fault</text>
+    <x>339</x>
+    <y>408</y>
+    <width>60</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_76</name>
+    <x>403</x>
+    <y>492</y>
+    <width>169</width>
+    <height>76</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_18</name>
+    <pv_name>$(P)CH4:Fault-SP</pv_name>
+    <x>407</x>
+    <y>495</y>
+    <width>163</width>
+    <height>69</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <items>
+      <item>FLT1</item>
+      <item>FLT2</item>
+      <item>Spare</item>
+    </items>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_184</name>
+    <text>CH4
+Fault</text>
+    <x>339</x>
+    <y>493</y>
+    <width>60</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_185</name>
+    <text>Ignd
+Chan</text>
+    <x>15</x>
+    <y>152</y>
+    <width>65</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_186</name>
+    <text>Ignd
+Value</text>
+    <x>310</x>
+    <y>152</y>
+    <width>65</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_187</name>
+    <text>DCCT
+Fault</text>
+    <x>16</x>
+    <y>66</y>
+    <width>65</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_189</name>
+    <text>DAC
+Value</text>
+    <x>156</x>
+    <y>578</y>
+    <width>65</width>
+    <height>74</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_231</name>
+    <text>UDP: IP Address:Port</text>
+    <x>272</x>
+    <y>12</y>
+    <width>220</width>
+    <height>35</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>2</border_width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(P)IP:Settings-SP</pv_name>
+    <x>498</x>
+    <y>12</y>
+    <width>201</width>
+    <height>35</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <format>6</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_width>2</border_width>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(P)Readback:Status-I</pv_name>
+    <x>505</x>
+    <y>184</y>
+    <width>187</width>
+    <height>30</height>
+    <off_label>Readback Error</off_label>
+    <off_color>
+      <color red="255" green="100" blue="100">
+      </color>
+    </off_color>
+    <on_label>Readbacks OK</on_label>
+    <on_color>
+      <color red="100" green="255" blue="100">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+</display>

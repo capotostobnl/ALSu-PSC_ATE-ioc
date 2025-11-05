@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-07-23 11:39:26 by diag-->
+<display version="2.0.0">
+  <name>BPCstart</name>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_62</name>
+    <actions>
+      <action type="open_display">
+        <file>BPCstatus.bob</file>
+        <macros>
+          <P>BPC{1}:</P>
+          <SYS>BPC:</SYS>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Start BPC</text>
+    <x>137</x>
+    <y>95</y>
+    <width>107</width>
+    <height>47</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_63</name>
+    <actions>
+      <action type="open_display">
+        <file>BPCtester.bob</file>
+        <macros>
+          <P>PSCtest:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Start BPC Tester</text>
+    <x>156</x>
+    <y>177</y>
+    <width>146</width>
+    <height>47</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+  </widget>
+</display>
