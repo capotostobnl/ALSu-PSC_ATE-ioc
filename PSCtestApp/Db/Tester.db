@@ -409,16 +409,16 @@ record(aSub,"$(P)Tester2-Sub"){
     # --- Power Converter Faults ---
     field(FTP,  "LONG")
     field(NOP,  "1")
-    field(INPP, "$(P)CH1:BPCFault-SP") # CH1
+    field(INPP, "$(P)CH1:PCFault-SP") # CH1
     field(FTQ,  "LONG")
     field(NOQ,  "1")
-    field(INPQ, "$(P)CH2:BPCFault-SP") # CH2
+    field(INPQ, "$(P)CH2:PCFault-SP") # CH2
     field(FTR,  "LONG")
     field(NOR,  "1")
-    field(INPR, "$(P)CH3:BPCFault-SP") # CH3
+    field(INPR, "$(P)CH3:PCFault-SP") # CH3
     field(FTS,  "LONG")
     field(NOS,  "1")
-    field(INPS, "$(P)CH4:BPCFault-SP") # CH4
+    field(INPS, "$(P)CH4:PCFault-SP") # CH4
 
     # --- Output ---
     field(FTVA, "CHAR")

@@ -131,22 +131,22 @@ static int Tester2(aSubRecord *precord) {
     else if(oldBPCFault1 != BPCFault1){
         oldBPCFault1 = BPCFault1;
         if (BPCFault1 == 1) sprintf(cmd, "F1\n"); // CH1 Set
-        else sprintf(cmd, "\n"); // CH1 Reset (Placeholder)
+        //else sprintf(cmd, "\n"); // CH1 Reset (Placeholder)
     }
     else if(oldBPCFault2 != BPCFault2){
         oldBPCFault2 = BPCFault2;
         if (BPCFault2 == 1) sprintf(cmd, "F2\n"); // CH2 Set
-        else sprintf(cmd, "\n"); // CH2 Reset (Placeholder)
+        //else sprintf(cmd, "\n"); // CH2 Reset (Placeholder)
     }
     else if(oldBPCFault3 != BPCFault3){
         oldBPCFault3 = BPCFault3;
         if (BPCFault3 == 1) sprintf(cmd, "F3\n"); // CH3 Set
-        else sprintf(cmd, "\n"); // CH3 Reset (Placeholder)
+        //else sprintf(cmd, "\n"); // CH3 Reset (Placeholder)
     }
     else if(oldBPCFault4 != BPCFault4){
         oldBPCFault4 = BPCFault4;
         if (BPCFault4 == 1) sprintf(cmd, "F4\n"); // CH4 Set
-        else sprintf(cmd, "\n"); // CH4 Reset (Placeholder)
+        //else sprintf(cmd, "\n"); // CH4 Reset (Placeholder)
     }
 
     // Copy command to output if one was built
