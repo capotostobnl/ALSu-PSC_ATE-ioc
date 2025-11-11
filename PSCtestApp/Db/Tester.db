@@ -38,6 +38,14 @@ record(bo, "$(P)CH4:Mode-SP") {
     field(VAL, "0")
 }
 
+record(bo, "$(P)Polarity-SP") {
+    field(DESC, "Set Polarity")
+    field(ZNAM, "BPC")
+    field(ONAM, "UPC")
+    field(ZRVL, 0)
+    field(ONVL, 1)
+}
+
 record(mbbo, "$(P)DCCT:Fault:Channel-SP") {
     field(DESC, "Set CH1 OFF or ON")
     field(ZRST,"NONE")
@@ -64,44 +72,75 @@ record(mbbo, "$(P)Ignd:Channel-SP") {
     field(THVL,"4")
 }
 
-record(mbbo, "$(P)CH1:Fault-SP") {
-    field(DESC, "Set CH1 Fault")
-    field(ZRST,"FLT1")
-    field(ONST,"FLT2")
-    field(TWST,"Spare")
-    field(ZRVL,"1")
-    field(ONVL,"2")
-    field(TWVL,"3")
+record(bo, "$(P)CH1:FLT1-SP") {
+    field(DESC, "Set CH1 FLT1 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
 }
 
-record(mbbo, "$(P)CH2:Fault-SP") {
-    field(DESC, "Set CH2 Fault")
-    field(ZRST,"FLT1")
-    field(ONST,"FLT2")
-    field(TWST,"Spare")
-    field(ZRVL,"1")
-    field(ONVL,"2")
-    field(TWVL,"3")
+record(bo, "$(P)CH1:FLT2-SP") {
+    field(DESC, "Set CH1 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
 }
 
-record(mbbo, "$(P)CH3:Fault-SP") {
-    field(DESC, "Set CH3 Fault")
-    field(ZRST,"FLT1")
-    field(ONST,"FLT2")
-    field(TWST,"Spare")
-    field(ZRVL,"1")
-    field(ONVL,"2")
-    field(TWVL,"3")
+record(bo, "$(P)CH1:Spare-SP") {
+    field(DESC, "Set CH1 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
 }
 
-record(mbbo, "$(P)CH4:Fault-SP") {
-    field(DESC, "Set CH4 Fault")
-    field(ZRST,"FLT1")
-    field(ONST,"FLT2")
-    field(TWST,"Spare")
-    field(ZRVL,"1")
-    field(ONVL,"2")
-    field(TWVL,"3")
+record(bo, "$(P)CH2:FLT1-SP") {
+    field(DESC, "Set CH2 FLT1 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH2:FLT2-SP") {
+    field(DESC, "Set CH2 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH2:Spare-SP") {
+    field(DESC, "Set CH1 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH3:FLT1-SP") {
+    field(DESC, "Set CH3 FLT1 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH3:FLT2-SP") {
+    field(DESC, "Set CH3 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH3:Spare-SP") {
+    field(DESC, "Set CH1 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH4:FLT1-SP") {
+    field(DESC, "Set CH4 FLT1 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+record(bo, "$(P)CH4:FLT2-SP") {
+    field(DESC, "Set CH4 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH4:Spare-SP") {
+    field(DESC, "Set CH1 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
 }
 
 record(ai,"$(P)DCCT:P15V:14-I"){
@@ -200,6 +239,46 @@ record(waveform, "$(P)Tester2:CMD-I"){
   field(NELM,"30")
 }
 
+record(waveform, "$(P)MAN-CMD-SP"){
+  field(DESC, "Manual Command Setpoint")
+  field(DTYP, "Soft Channel")
+  field(FTVL, "CHAR")
+  field(NELM, "20")
+  field(VAL,  "")
+}
+
+record(bo, "$(P)CH1:PCFault-SP") {
+    field(DESC, "Set/Reset CH1 PC Fault")
+    field(ZNAM, "Reset")  # String for 0
+    field(ONAM, "Set")    # String for 1
+    field(ZRVL, 0)
+    field(ONVL, 1)
+}
+
+record(bo, "$(P)CH2:PCFault-SP") {
+    field(DESC, "Set/Reset CH2 PC Fault")
+    field(ZNAM, "Reset")
+    field(ONAM, "Set")
+    field(ZRVL, 0)
+    field(ONVL, 1)
+}
+
+record(bo, "$(P)CH3:PCFault-SP") {
+    field(DESC, "Set/Reset CH3 PC Fault")
+    field(ZNAM, "Reset")
+    field(ONAM, "Set")
+    field(ZRVL, 0)
+    field(ONVL, 1)
+}
+
+record(bo, "$(P)CH4:PCFault-SP") {
+    field(DESC, "Set/Reset CH4 PC Fault")
+    field(ZNAM, "Reset")
+    field(ONAM, "Set")
+    field(ZRVL, 0)
+    field(ONVL, 1)
+}
+
 record(aSub,"$(P)Tester-Sub"){
     field(SNAM,"Tester")
     field(SCAN,".5 second")
@@ -281,23 +360,68 @@ record(aSub,"$(P)Tester2-Sub"){
     field(SNAM,"Tester2")
     field(SCAN,".5 second")
 
+# --- Inputs for Channel 1 ---
     field(FTA,  "LONG")
-    field(NOA,  "1")
-    field(INPA, "$(P)CH1:Fault-SP.RVAL")
+    field(INPA, "$(P)CH1:FLT1-SP") # DI11z
     field(FTB,  "LONG")
-    field(NOB,  "1")
-    field(INPB, "$(P)CH2:Fault-SP.RVAL")
+    field(INPB, "$(P)CH1:FLT2-SP") # DI12z
     field(FTC,  "LONG")
-    field(NOC,  "1")
-    field(INPC, "$(P)CH3:Fault-SP.RVAL")
-    field(FTD,  "LONG")
-    field(NOD,  "1")
-    field(INPD, "$(P)CH4:Fault-SP.RVAL")
-    field(FTE,  "FLOAT")
-    field(NOE,  "1")
-    field(INPE, "$(P)CAL:DAC-SP")
+    field(INPC, "$(P)CH1:Spare-SP") # DI13z
 
-    field(FTVA,  "CHAR")
-    field(NOVA,  "30")
+    # --- Inputs for Channel 2 ---
+    field(FTD,  "LONG")
+    field(INPD, "$(P)CH2:FLT1-SP") # DI21z
+    field(FTE,  "LONG")
+    field(INPE, "$(P)CH2:FLT2-SP") # DI22z
+    field(FTF,  "LONG")
+    field(INPF, "$(P)CH2:Spare-SP") # DI23z
+
+    # --- Inputs for Channel 3 ---
+    field(FTG,  "LONG")
+    field(INPG, "$(P)CH3:FLT1-SP") # DI31z
+    field(FTH,  "LONG")
+    field(INPH, "$(P)CH3:FLT2-SP") # DI32z
+    field(FTI,  "LONG")
+    field(INPI, "$(P)CH3:Spare-SP") # DI33z
+
+    # --- Inputs for Channel 4 ---
+    field(FTJ,  "LONG")
+    field(INPJ, "$(P)CH4:FLT1-SP") # DI41z
+    field(FTK,  "LONG")
+    field(INPK, "$(P)CH4:FLT2-SP") # DI42z
+    field(FTL,  "LONG")
+    field(INPL, "$(P)CH4:Spare-SP") # DI43z
+
+    # --- CALDAC ---
+    field(FTM,  "FLOAT")
+    field(INPM, "$(P)CAL:DAC-SP")
+
+    # --- Manual Command Input ---
+    field(FTN,  "CHAR")   # Field Type for Input V
+    field(NON,  "20")     # Number of elements in V
+    field(INPN, "$(P)MAN-CMD-SP") # Link to your new PV
+
+    # --- Polarity for Emulation ---
+    field(FTO,  "LONG")
+    field(NOO,  "1")
+    field(INPO, "$(P)Polarity-SP")
+
+    # --- Power Converter Faults ---
+    field(FTP,  "LONG")
+    field(NOP,  "1")
+    field(INPP, "$(P)CH1:BPCFault-SP") # CH1
+    field(FTQ,  "LONG")
+    field(NOQ,  "1")
+    field(INPQ, "$(P)CH2:BPCFault-SP") # CH2
+    field(FTR,  "LONG")
+    field(NOR,  "1")
+    field(INPR, "$(P)CH3:BPCFault-SP") # CH3
+    field(FTS,  "LONG")
+    field(NOS,  "1")
+    field(INPS, "$(P)CH4:BPCFault-SP") # CH4
+
+    # --- Output ---
+    field(FTVA, "CHAR")
+    field(NOVA, "30")
     field(OUTA, "$(P)Tester2:CMD-I")
 }
