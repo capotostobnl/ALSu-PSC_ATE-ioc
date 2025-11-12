@@ -22,10 +22,7 @@ static int Tester2(aSubRecord *precord) {
     static int oldCH2_F1=0, oldCH2_F2=0, oldCH2_S=0;
     static int oldCH3_F1=0, oldCH3_F2=0, oldCH3_S=0;
     static int oldCH4_F1=0, oldCH4_F2=0, oldCH4_S=0;
-<<<<<<< HEAD
     static int oldPCFault1=0, oldPCFault2=0, oldPCFault3=0, oldPCFault4=0;
-=======
->>>>>>> origin/dev
     static float oldCAL=0;
     static char oldManCmd[20];
     static int oldPolarity=0;
@@ -52,14 +49,11 @@ static int Tester2(aSubRecord *precord) {
 
     int Polarity = *(int *)precord->o;    // INPO
 
-<<<<<<< HEAD
 
     int PCFault1 = *(int *)precord->p; //INPP
     int PCFault2 = *(int *)precord->q; //INPQ
     int PCFault3 = *(int *)precord->r; //INPR
     int PCFault4 = *(int *)precord->s; //INPS
-=======
->>>>>>> origin/dev
     char cmd[20] = ""; // Local buffer
 
     if(strcmp(oldManCmd,ManCmd)!=0){
@@ -140,7 +134,6 @@ static int Tester2(aSubRecord *precord) {
         oldPolarity = Polarity;
         sprintf(cmd, "P%d\n", Polarity);
     }
-<<<<<<< HEAD
     else if(oldPCFault1 != PCFault1){
         oldPCFault1 = PCFault1;
         if (PCFault1 == 1) sprintf(cmd, "F1\n"); // CH1 Set
@@ -159,26 +152,6 @@ static int Tester2(aSubRecord *precord) {
     else if(oldPCFault4 != PCFault4){
         oldPCFault4 = PCFault4;
         if (PCFault4 == 1) sprintf(cmd, "F4\n"); // CH4 Set
-=======
-    else if(oldBPCFault1 != BPCFault1){
-        oldBPCFault1 = BPCFault1;
-        if (BPCFault1 == 1) sprintf(cmd, "F1\n"); // CH1 Set
-        //else sprintf(cmd, "\n"); // CH1 Reset (Placeholder)
-    }
-    else if(oldBPCFault2 != BPCFault2){
-        oldBPCFault2 = BPCFault2;
-        if (BPCFault2 == 1) sprintf(cmd, "F2\n"); // CH2 Set
-        //else sprintf(cmd, "\n"); // CH2 Reset (Placeholder)
-    }
-    else if(oldBPCFault3 != BPCFault3){
-        oldBPCFault3 = BPCFault3;
-        if (BPCFault3 == 1) sprintf(cmd, "F3\n"); // CH3 Set
-        //else sprintf(cmd, "\n"); // CH3 Reset (Placeholder)
-    }
-    else if(oldBPCFault4 != BPCFault4){
-        oldBPCFault4 = BPCFault4;
-        if (BPCFault4 == 1) sprintf(cmd, "F4\n"); // CH4 Set
->>>>>>> origin/dev
         //else sprintf(cmd, "\n"); // CH4 Reset (Placeholder)
     }
 
@@ -194,8 +167,4 @@ static int Tester2(aSubRecord *precord) {
     return(0);
 }
 // Note the function must be registered at the end!
-<<<<<<< HEAD
 epicsRegisterFunction(Tester2);
-=======
-epicsRegisterFunction(Tester2);
->>>>>>> origin/dev

@@ -21,9 +21,5 @@ iocInit()
 #seq sncPSCtest,"user=diag"
 
 #dbpf PSCtest:IP:Settings-SP 10.0.142.47:5000
-<<<<<<< HEAD
 #dbpf PSCtest:IP:Settings-SP 10.69.26.2:5000
 dbpf PSCtest:IP:Settings-SP 10.69.26.3:5000
-=======
-dbpf PSCtest:IP:Settings-SP 10.69.26.2:5000
->>>>>>> origin/dev

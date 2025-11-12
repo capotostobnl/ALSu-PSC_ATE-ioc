@@ -38,7 +38,6 @@ record(bo, "$(P)CH4:Mode-SP") {
     field(VAL, "0")
 }
 
-<<<<<<< HEAD
 record(bo, "$(P)Polarity-SP") {
     field(DESC, "Set Polarity")
     field(ZNAM, "BPC")
@@ -47,8 +46,6 @@ record(bo, "$(P)Polarity-SP") {
     field(ONVL, 1)
 }
 
-=======
->>>>>>> origin/dev
 record(mbbo, "$(P)DCCT:Fault:Channel-SP") {
     field(DESC, "Set CH1 OFF or ON")
     field(ZRST,"NONE")
@@ -75,7 +72,6 @@ record(mbbo, "$(P)Ignd:Channel-SP") {
     field(THVL,"4")
 }
 
-<<<<<<< HEAD
 record(bo, "$(P)CH1:FLT1-SP") {
     field(DESC, "Set CH1 FLT1 State")
     field(ZRST, "Low")
@@ -145,46 +141,6 @@ record(bo, "$(P)CH4:Spare-SP") {
     field(DESC, "Set CH1 FLT2 State")
     field(ZRST, "Low")
     field(ONST, "High")
-=======
-record(mbbo, "$(P)CH1:Fault-SP") {
-    field(DESC, "Set CH1 Fault")
-    field(ZRST,"FLT1")
-    field(ONST,"FLT2")
-    field(TWST,"Spare")
-    field(ZRVL,"1")
-    field(ONVL,"2")
-    field(TWVL,"3")
-}
-
-record(mbbo, "$(P)CH2:Fault-SP") {
-    field(DESC, "Set CH2 Fault")
-    field(ZRST,"FLT1")
-    field(ONST,"FLT2")
-    field(TWST,"Spare")
-    field(ZRVL,"1")
-    field(ONVL,"2")
-    field(TWVL,"3")
-}
-
-record(mbbo, "$(P)CH3:Fault-SP") {
-    field(DESC, "Set CH3 Fault")
-    field(ZRST,"FLT1")
-    field(ONST,"FLT2")
-    field(TWST,"Spare")
-    field(ZRVL,"1")
-    field(ONVL,"2")
-    field(TWVL,"3")
-}
-
-record(mbbo, "$(P)CH4:Fault-SP") {
-    field(DESC, "Set CH4 Fault")
-    field(ZRST,"FLT1")
-    field(ONST,"FLT2")
-    field(TWST,"Spare")
-    field(ZRVL,"1")
-    field(ONVL,"2")
-    field(TWVL,"3")
->>>>>>> origin/dev
 }
 
 record(ai,"$(P)DCCT:P15V:14-I"){
@@ -283,7 +239,6 @@ record(waveform, "$(P)Tester2:CMD-I"){
   field(NELM,"30")
 }
 
-<<<<<<< HEAD
 record(waveform, "$(P)MAN-CMD-SP"){
   field(DESC, "Manual Command Setpoint")
   field(DTYP, "Soft Channel")
@@ -324,8 +279,6 @@ record(bo, "$(P)CH4:PCFault-SP") {
     field(ONVL, 1)
 }
 
-=======
->>>>>>> origin/dev
 record(aSub,"$(P)Tester-Sub"){
     field(SNAM,"Tester")
     field(SCAN,".5 second")
@@ -407,7 +360,6 @@ record(aSub,"$(P)Tester2-Sub"){
     field(SNAM,"Tester2")
     field(SCAN,".5 second")
 
-<<<<<<< HEAD
 # --- Inputs for Channel 1 ---
     field(FTA,  "LONG")
     field(INPA, "$(P)CH1:FLT1-SP") # DI11z
@@ -473,25 +425,3 @@ record(aSub,"$(P)Tester2-Sub"){
     field(NOVA, "30")
     field(OUTA, "$(P)Tester2:CMD-I")
 }
-=======
-    field(FTA,  "LONG")
-    field(NOA,  "1")
-    field(INPA, "$(P)CH1:Fault-SP.RVAL")
-    field(FTB,  "LONG")
-    field(NOB,  "1")
-    field(INPB, "$(P)CH2:Fault-SP.RVAL")
-    field(FTC,  "LONG")
-    field(NOC,  "1")
-    field(INPC, "$(P)CH3:Fault-SP.RVAL")
-    field(FTD,  "LONG")
-    field(NOD,  "1")
-    field(INPD, "$(P)CH4:Fault-SP.RVAL")
-    field(FTE,  "FLOAT")
-    field(NOE,  "1")
-    field(INPE, "$(P)CAL:DAC-SP")
-
-    field(FTVA,  "CHAR")
-    field(NOVA,  "30")
-    field(OUTA, "$(P)Tester2:CMD-I")
-}
->>>>>>> origin/dev
