@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-11-11 07:05:05 by Mike-->
+<!--Saved on 2025-11-12 00:47:26 by Mike-->
 <display version="2.0.0">
   <name>BPCtester</name>
   <width>730</width>
@@ -1664,7 +1664,7 @@ Fault</text>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_25</name>
-    <pv_name>$(P)CAL:DAC-SP</pv_name>
+    <pv_name>$(P)MAN-CMD-SP</pv_name>
     <x>580</x>
     <y>736</y>
     <width>112</width>
