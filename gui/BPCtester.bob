@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-11-12 00:47:26 by Mike-->
 <display version="2.0.0">
   <name>BPCtester</name>
   <width>730</width>
@@ -633,7 +632,7 @@ Value</text>
     </on_color>
     <square>true</square>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_5</name>
     <pv_name>$(P)CH1:FLT1-SP</pv_name>
     <x>406</x>
@@ -644,18 +643,9 @@ Value</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_6</name>
     <pv_name>$(P)CH1:FLT2-SP</pv_name>
     <x>466</x>
@@ -666,18 +656,9 @@ Value</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_7</name>
     <pv_name>$(P)CH1:Spare-SP</pv_name>
     <x>526</x>
@@ -688,16 +669,7 @@ Value</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_188</name>
@@ -934,7 +906,7 @@ Fault</text>
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_9</name>
     <pv_name>$(P)CH2:FLT1-SP</pv_name>
     <x>406</x>
@@ -945,18 +917,9 @@ Fault</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_10</name>
     <pv_name>$(P)CH2:FLT2-SP</pv_name>
     <x>466</x>
@@ -967,18 +930,9 @@ Fault</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_11</name>
     <pv_name>$(P)CH2:Spare-SP</pv_name>
     <x>526</x>
@@ -989,16 +943,7 @@ Fault</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_196</name>
@@ -1235,7 +1180,7 @@ Fault</text>
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_14</name>
     <pv_name>$(P)CH3:FLT1-SP</pv_name>
     <x>406</x>
@@ -1246,18 +1191,9 @@ Fault</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_15</name>
     <pv_name>$(P)CH3:FLT2-SP</pv_name>
     <x>466</x>
@@ -1268,18 +1204,9 @@ Fault</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_16</name>
     <pv_name>$(P)CH3:Spare-SP</pv_name>
     <x>526</x>
@@ -1290,16 +1217,7 @@ Fault</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_203</name>
@@ -1536,7 +1454,7 @@ Fault</text>
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_18</name>
     <pv_name>$(P)CH4:FLT1-SP</pv_name>
     <x>406</x>
@@ -1547,18 +1465,9 @@ Fault</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_19</name>
     <pv_name>$(P)CH4:FLT2-SP</pv_name>
     <x>466</x>
@@ -1569,18 +1478,9 @@ Fault</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_20</name>
     <pv_name>$(P)CH4:Spare-SP</pv_name>
     <x>526</x>
@@ -1591,16 +1491,7 @@ Fault</text>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Low</item>
-      <item>High</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_210</name>
@@ -1741,7 +1632,7 @@ Command
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_23</name>
     <pv_name>$(P)CH2:PCFault-SP</pv_name>
     <x>586</x>
@@ -1752,15 +1643,7 @@ Command
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Fault</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_216</name>
@@ -1782,7 +1665,7 @@ Command
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_24</name>
     <pv_name>$(P)CH3:PCFault-SP</pv_name>
     <x>586</x>
@@ -1793,15 +1676,7 @@ Command
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Fault</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_217</name>
@@ -1823,7 +1698,7 @@ Command
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_25</name>
     <pv_name>$(P)CH4:PCFault-SP</pv_name>
     <x>586</x>
@@ -1834,15 +1709,7 @@ Command
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Fault</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle_71</name>
@@ -1898,7 +1765,7 @@ Command
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
   </widget>
-  <widget type="choice" version="2.0.0">
+  <widget type="bool_button" version="2.0.0">
     <name>Choice Button_28</name>
     <pv_name>$(P)CH1:PCFault-SP</pv_name>
     <x>586</x>
@@ -1909,14 +1776,6 @@ Command
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <selected_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </selected_color>
-    <horizontal>false</horizontal>
-    <items>
-      <item>Fault</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
+    <show_confirm_dialog>false</show_confirm_dialog>
   </widget>
 </display>

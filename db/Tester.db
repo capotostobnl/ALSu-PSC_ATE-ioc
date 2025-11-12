@@ -42,8 +42,6 @@ record(bo, "$(P)Polarity-SP") {
     field(DESC, "Set Polarity")
     field(ZNAM, "BPC")
     field(ONAM, "UPC")
-    field(ZRVL, 0)
-    field(ONVL, 1)
 }
 
 record(mbbo, "$(P)DCCT:Fault:Channel-SP") {
@@ -74,73 +72,73 @@ record(mbbo, "$(P)Ignd:Channel-SP") {
 
 record(bo, "$(P)CH1:FLT1-SP") {
     field(DESC, "Set CH1 FLT1 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(bo, "$(P)CH1:FLT2-SP") {
     field(DESC, "Set CH1 FLT2 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(bo, "$(P)CH1:Spare-SP") {
     field(DESC, "Set CH1 FLT2 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(bo, "$(P)CH2:FLT1-SP") {
     field(DESC, "Set CH2 FLT1 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(bo, "$(P)CH2:FLT2-SP") {
     field(DESC, "Set CH2 FLT2 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(bo, "$(P)CH2:Spare-SP") {
     field(DESC, "Set CH1 FLT2 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(bo, "$(P)CH3:FLT1-SP") {
     field(DESC, "Set CH3 FLT1 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(bo, "$(P)CH3:FLT2-SP") {
     field(DESC, "Set CH3 FLT2 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(bo, "$(P)CH3:Spare-SP") {
     field(DESC, "Set CH1 FLT2 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(bo, "$(P)CH4:FLT1-SP") {
     field(DESC, "Set CH4 FLT1 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 record(bo, "$(P)CH4:FLT2-SP") {
     field(DESC, "Set CH4 FLT2 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(bo, "$(P)CH4:Spare-SP") {
     field(DESC, "Set CH1 FLT2 State")
-    field(ZRST, "Low")
-    field(ONST, "High")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
 }
 
 record(ai,"$(P)DCCT:P15V:14-I"){
@@ -244,7 +242,6 @@ record(waveform, "$(P)MAN-CMD-SP"){
   field(DTYP, "Soft Channel")
   field(FTVL, "CHAR")
   field(NELM, "20")
-  field(VAL,  "")
 }
 
 record(bo, "$(P)CH1:PCFault-SP") {

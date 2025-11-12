@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-23 11:39:26 by diag-->
 <display version="2.0.0">
   <name>BPCstart</name>
   <widget type="action_button" version="3.0.0">
     <name>Action Button_62</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>BPCstatus.bob</file>
         <macros>
           <P>BPC{1}:</P>
           <SYS>BPC:</SYS>
         </macros>
         <target>replace</target>
-        <description>Open Display</description>
       </action>
     </actions>
     <text>Start BPC</text>
@@ -36,12 +35,12 @@
     <name>Action Button_63</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>BPCtester.bob</file>
         <macros>
           <P>PSCtest:</P>
         </macros>
-        <target>replace</target>
-        <description>Open Display</description>
+        <target>tab</target>
       </action>
     </actions>
     <text>Start BPC Tester</text>
