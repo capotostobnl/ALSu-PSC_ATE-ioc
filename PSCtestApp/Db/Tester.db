@@ -1,0 +1,427 @@
+record(stringout,"$(P)IP:Settings-SP"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"IP Address:Port #")
+}
+
+record(bo, "$(P)CAL:State-SP") {
+    field(DESC, "Set CAL OFF or ON")
+    field(ZNAM,"OFF")
+    field(ONAM,"ON")
+    field(VAL, "0")
+}
+
+record(bo, "$(P)CH1:Mode-SP") {
+    field(DESC, "Set CH1 Mode to TEST or CAL")
+    field(ZNAM,"TEST")
+    field(ONAM,"CAL")
+    field(VAL, "0")
+}
+
+record(bo, "$(P)CH2:Mode-SP") {
+    field(DESC, "Set CH2 Mode to TEST or CAL")
+    field(ZNAM,"TEST")
+    field(ONAM,"CAL")
+    field(VAL, "0")
+}
+
+record(bo, "$(P)CH3:Mode-SP") {
+    field(DESC, "Set CH3 Mode to TEST or CAL")
+    field(ZNAM,"TEST")
+    field(ONAM,"CAL")
+    field(VAL, "0")
+}
+
+record(bo, "$(P)CH4:Mode-SP") {
+    field(DESC, "Set CH4 mode to TEST or CAL")
+    field(ZNAM,"TEST")
+    field(ONAM,"CAL")
+    field(VAL, "0")
+}
+
+record(bo, "$(P)Polarity-SP") {
+    field(DESC, "Set Polarity")
+    field(ZNAM, "BPC")
+    field(ONAM, "UPC")
+    field(ZRVL, 0)
+    field(ONVL, 1)
+}
+
+record(mbbo, "$(P)DCCT:Fault:Channel-SP") {
+    field(DESC, "Set CH1 OFF or ON")
+    field(ZRST,"NONE")
+    field(ONST,"CH1")
+    field(TWST,"CH2")
+    field(THST,"CH3")
+    field(FRST,"CH4")
+    field(ZRVL,"0")
+    field(ONVL,"1")
+    field(TWVL,"2")
+    field(THVL,"3")
+    field(FRVL,"4")
+}
+
+record(mbbo, "$(P)Ignd:Channel-SP") {
+    field(DESC, "Set CH1 OFF or ON")
+    field(ZRST,"CH1")
+    field(ONST,"CH2")
+    field(TWST,"CH3")
+    field(THST,"CH4")
+    field(ZRVL,"1")
+    field(ONVL,"2")
+    field(TWVL,"3")
+    field(THVL,"4")
+}
+
+record(bo, "$(P)CH1:FLT1-SP") {
+    field(DESC, "Set CH1 FLT1 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH1:FLT2-SP") {
+    field(DESC, "Set CH1 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH1:Spare-SP") {
+    field(DESC, "Set CH1 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH2:FLT1-SP") {
+    field(DESC, "Set CH2 FLT1 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH2:FLT2-SP") {
+    field(DESC, "Set CH2 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH2:Spare-SP") {
+    field(DESC, "Set CH1 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH3:FLT1-SP") {
+    field(DESC, "Set CH3 FLT1 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH3:FLT2-SP") {
+    field(DESC, "Set CH3 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH3:Spare-SP") {
+    field(DESC, "Set CH1 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH4:FLT1-SP") {
+    field(DESC, "Set CH4 FLT1 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+record(bo, "$(P)CH4:FLT2-SP") {
+    field(DESC, "Set CH4 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(bo, "$(P)CH4:Spare-SP") {
+    field(DESC, "Set CH1 FLT2 State")
+    field(ZRST, "Low")
+    field(ONST, "High")
+}
+
+record(ai,"$(P)DCCT:P15V:14-I"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ai,"$(P)DCCT:N15V:14-I"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ai,"$(P)DCCT:P15V:58-I"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ai,"$(P)DCCT:N15V:58-I"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH1:Vmon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH1:Imon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH2:Vmon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH2:Imon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH3:Vmon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH3:Imon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH4:Vmon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CH4:Imon:Gain-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)CAL:DAC-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ao,"$(P)Ignd-SP"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P)Readback:Status-I"){
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(waveform, "$(P)Tester2:CMD-I"){
+  field(DTYP,"Soft Channel")
+  field(FTVL,"CHAR")
+  field(NELM,"30")
+}
+
+record(waveform, "$(P)MAN-CMD-SP"){
+  field(DESC, "Manual Command Setpoint")
+  field(DTYP, "Soft Channel")
+  field(FTVL, "CHAR")
+  field(NELM, "20")
+  field(VAL,  "")
+}
+
+record(bo, "$(P)CH1:PCFault-SP") {
+    field(DESC, "Set/Reset CH1 PC Fault")
+    field(ZNAM, "Reset")  # String for 0
+    field(ONAM, "Set")    # String for 1
+    field(ZRVL, 0)
+    field(ONVL, 1)
+}
+
+record(bo, "$(P)CH2:PCFault-SP") {
+    field(DESC, "Set/Reset CH2 PC Fault")
+    field(ZNAM, "Reset")
+    field(ONAM, "Set")
+    field(ZRVL, 0)
+    field(ONVL, 1)
+}
+
+record(bo, "$(P)CH3:PCFault-SP") {
+    field(DESC, "Set/Reset CH3 PC Fault")
+    field(ZNAM, "Reset")
+    field(ONAM, "Set")
+    field(ZRVL, 0)
+    field(ONVL, 1)
+}
+
+record(bo, "$(P)CH4:PCFault-SP") {
+    field(DESC, "Set/Reset CH4 PC Fault")
+    field(ZNAM, "Reset")
+    field(ONAM, "Set")
+    field(ZRVL, 0)
+    field(ONVL, 1)
+}
+
+record(aSub,"$(P)Tester-Sub"){
+    field(SNAM,"Tester")
+    field(SCAN,".5 second")
+
+    field(FTA,  "STRING")
+    field(NOA,  "60")
+    field(INPA, "$(P)IP:Settings-SP")
+
+    field(FTE,  "LONG")
+    field(NOE,  "1")
+    field(INPE, "$(P)CAL:State-SP.VAL")
+    field(FTF,  "LONG")
+    field(NOF,  "1")
+    field(INPF, "$(P)CH1:Mode-SP.VAL")
+    field(FTG,  "LONG")
+    field(NOG,  "1")
+    field(INPG, "$(P)CH2:Mode-SP.VAL")
+    field(FTH,  "LONG")
+    field(NOH,  "1")
+    field(INPH, "$(P)CH3:Mode-SP.VAL")
+    field(FTI,  "LONG")
+    field(NOI,  "1")
+    field(INPI, "$(P)CH4:Mode-SP.VAL")
+    field(FTJ,  "LONG")
+    field(NOJ,  "1")
+    field(INPJ, "$(P)DCCT:Fault:Channel-SP.RVAL")
+    field(FTK,  "LONG")
+    field(NOK,  "1")
+    field(INPK, "$(P)Ignd:Channel-SP.RVAL")
+    field(FTL,  "FLOAT")
+    field(NOL,  "1")
+    field(INPL, "$(P)Ignd-SP")
+    field(FTM,  "FLOAT")
+    field(NOM,  "1")
+    field(INPM, "$(P)CH1:Vmon:Gain-SP")
+    field(FTN,  "FLOAT")
+    field(NON,  "1")
+    field(INPN, "$(P)CH2:Vmon:Gain-SP")
+    field(FTO,  "FLOAT")
+    field(NOO,  "1")
+    field(INPO, "$(P)CH3:Vmon:Gain-SP")
+    field(FTP,  "FLOAT")
+    field(NOP,  "1")
+    field(INPP, "$(P)CH4:Vmon:Gain-SP")
+    field(FTQ,  "FLOAT")
+    field(NOQ,  "1")
+    field(INPQ, "$(P)CH1:Imon:Gain-SP")
+    field(FTR,  "FLOAT")
+    field(NOR,  "1")
+    field(INPR, "$(P)CH2:Imon:Gain-SP")
+    field(FTS,  "FLOAT")
+    field(NOS,  "1")
+    field(INPS, "$(P)CH3:Imon:Gain-SP")
+    field(FTT,  "FLOAT")
+    field(NOT,  "1")
+    field(INPT, "$(P)CH4:Imon:Gain-SP")
+    field(FTU,  "CHAR")
+    field(NOU,  "30")
+    field(INPU, "$(P)Tester2:CMD-I")
+
+    field(FTVA,  "FLOAT")
+    field(NOVA,  "1")
+    field(OUTA, "$(P)DCCT:P15V:14-I PP")
+    field(FTVB,  "FLOAT")
+    field(NOVB,  "1")
+    field(OUTB, "$(P)DCCT:N15V:14-I PP")
+    field(FTVC,  "FLOAT")
+    field(NOVC,  "1")
+    field(OUTC, "$(P)DCCT:P15V:58-I PP")
+    field(FTVD,  "FLOAT")
+    field(NOVD,  "1")
+    field(OUTD, "$(P)DCCT:N15V:58-I PP")
+    field(FTVE,  "LONG")
+    field(NOVE,  "1")
+    field(OUTE, "$(P)Readback:Status-I PP")
+}
+
+record(aSub,"$(P)Tester2-Sub"){
+    field(SNAM,"Tester2")
+    field(SCAN,".5 second")
+
+# --- Inputs for Channel 1 ---
+    field(FTA,  "LONG")
+    field(INPA, "$(P)CH1:FLT1-SP") # DI11z
+    field(FTB,  "LONG")
+    field(INPB, "$(P)CH1:FLT2-SP") # DI12z
+    field(FTC,  "LONG")
+    field(INPC, "$(P)CH1:Spare-SP") # DI13z
+
+    # --- Inputs for Channel 2 ---
+    field(FTD,  "LONG")
+    field(INPD, "$(P)CH2:FLT1-SP") # DI21z
+    field(FTE,  "LONG")
+    field(INPE, "$(P)CH2:FLT2-SP") # DI22z
+    field(FTF,  "LONG")
+    field(INPF, "$(P)CH2:Spare-SP") # DI23z
+
+    # --- Inputs for Channel 3 ---
+    field(FTG,  "LONG")
+    field(INPG, "$(P)CH3:FLT1-SP") # DI31z
+    field(FTH,  "LONG")
+    field(INPH, "$(P)CH3:FLT2-SP") # DI32z
+    field(FTI,  "LONG")
+    field(INPI, "$(P)CH3:Spare-SP") # DI33z
+
+    # --- Inputs for Channel 4 ---
+    field(FTJ,  "LONG")
+    field(INPJ, "$(P)CH4:FLT1-SP") # DI41z
+    field(FTK,  "LONG")
+    field(INPK, "$(P)CH4:FLT2-SP") # DI42z
+    field(FTL,  "LONG")
+    field(INPL, "$(P)CH4:Spare-SP") # DI43z
+
+    # --- CALDAC ---
+    field(FTM,  "FLOAT")
+    field(INPM, "$(P)CAL:DAC-SP")
+
+    # --- Manual Command Input ---
+    field(FTN,  "CHAR")   # Field Type for Input V
+    field(NON,  "20")     # Number of elements in V
+    field(INPN, "$(P)MAN-CMD-SP") # Link to your new PV
+
+    # --- Polarity for Emulation ---
+    field(FTO,  "LONG")
+    field(NOO,  "1")
+    field(INPO, "$(P)Polarity-SP")
+
+    # --- Power Converter Faults ---
+    field(FTP,  "LONG")
+    field(NOP,  "1")
+    field(INPP, "$(P)CH1:PCFault-SP") # CH1
+    field(FTQ,  "LONG")
+    field(NOQ,  "1")
+    field(INPQ, "$(P)CH2:PCFault-SP") # CH2
+    field(FTR,  "LONG")
+    field(NOR,  "1")
+    field(INPR, "$(P)CH3:PCFault-SP") # CH3
+    field(FTS,  "LONG")
+    field(NOS,  "1")
+    field(INPS, "$(P)CH4:PCFault-SP") # CH4
+
+    # --- Output ---
+    field(FTVA, "CHAR")
+    field(NOVA, "30")
+    field(OUTA, "$(P)Tester2:CMD-I")
+}

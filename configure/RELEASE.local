@@ -1,0 +1,2 @@
+PSCDRV=/epics/support/pscdrv
+EPICS_BASE=/epics/base-7.0.9
