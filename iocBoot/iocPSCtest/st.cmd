@@ -4,7 +4,7 @@
 #- everywhere it appears in this file
 
 #< envPaths
-putenv("EPICS_CA_ADDR_LIST", "127.0.0.1")
+epicsEnvSet("EPICS_CA_ADDR_LIST", "127.0.0.1")
 epicsEnvSet(EPICS_BASE,"/epics/base-7.0.9")
 
 ## Register all support components

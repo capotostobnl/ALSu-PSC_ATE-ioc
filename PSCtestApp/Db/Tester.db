@@ -42,8 +42,6 @@ record(bo, "$(P)Polarity-SP") {
     field(DESC, "Set Polarity")
     field(ZNAM, "BPC")
     field(ONAM, "UPC")
-    field(ZRVL, 0)
-    field(ONVL, 1)
 }
 
 record(mbbo, "$(P)DCCT:Fault:Channel-SP") {
@@ -251,32 +249,24 @@ record(bo, "$(P)CH1:PCFault-SP") {
     field(DESC, "Set/Reset CH1 PC Fault")
     field(ZNAM, "Reset")  # String for 0
     field(ONAM, "Set")    # String for 1
-    field(ZRVL, 0)
-    field(ONVL, 1)
 }
 
 record(bo, "$(P)CH2:PCFault-SP") {
     field(DESC, "Set/Reset CH2 PC Fault")
     field(ZNAM, "Reset")
     field(ONAM, "Set")
-    field(ZRVL, 0)
-    field(ONVL, 1)
 }
 
 record(bo, "$(P)CH3:PCFault-SP") {
     field(DESC, "Set/Reset CH3 PC Fault")
     field(ZNAM, "Reset")
     field(ONAM, "Set")
-    field(ZRVL, 0)
-    field(ONVL, 1)
 }
 
 record(bo, "$(P)CH4:PCFault-SP") {
     field(DESC, "Set/Reset CH4 PC Fault")
     field(ZNAM, "Reset")
     field(ONAM, "Set")
-    field(ZRVL, 0)
-    field(ONVL, 1)
 }
 
 record(aSub,"$(P)Tester-Sub"){

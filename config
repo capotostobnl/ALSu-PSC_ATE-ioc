@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 NAME=PSCTest2
 PORT=4057
-=======
-NAME=PSCTest
-PORT=4056
->>>>>>> origin/dev
 USER=softioc
 HOST=pstester2

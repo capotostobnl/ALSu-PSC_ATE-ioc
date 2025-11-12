@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-=======
 <!--Saved on 2025-11-12 00:47:26 by Mike-->
->>>>>>> origin/dev
 <display version="2.0.0">
   <name>BPCtester</name>
   <width>730</width>
@@ -636,8 +633,6 @@ Value</text>
     </on_color>
     <square>true</square>
   </widget>
-<<<<<<< HEAD
-=======
   <widget type="choice" version="2.0.0">
     <name>Choice Button_5</name>
     <pv_name>$(P)CH1:FLT1-SP</pv_name>
@@ -704,7 +699,6 @@ Value</text>
     </items>
     <items_from_pv>false</items_from_pv>
   </widget>
->>>>>>> origin/dev
   <widget type="label" version="2.0.0">
     <name>Label_188</name>
     <text>FLT1</text>
@@ -1904,45 +1898,13 @@ Command
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
   </widget>
-<<<<<<< HEAD
-  <widget type="bool_button" version="2.0.0">
-    <name>Boolean Button</name>
-    <pv_name>$(P)CH1:FLT1-SP</pv_name>
-    <x>406</x>
-    <y>268</y>
-    <width>58</width>
-    <height>68</height>
-  </widget>
-  <widget type="bool_button" version="2.0.0">
-    <name>Boolean Button_1</name>
-    <pv_name>$(P)CH1:FLT2-SP</pv_name>
-    <x>466</x>
-    <y>268</y>
-    <width>58</width>
-    <height>68</height>
-  </widget>
-  <widget type="bool_button" version="2.0.0">
-    <name>Boolean Button_2</name>
-    <pv_name>$(P)CH1:Spare-SP</pv_name>
-    <x>526</x>
-    <y>268</y>
-    <width>58</width>
-    <height>68</height>
-  </widget>
-  <widget type="bool_button" version="2.0.0">
-    <name>Boolean Button_4</name>
-    <pv_name>$(P)CH2:PCFault-SP</pv_name>
-=======
   <widget type="choice" version="2.0.0">
     <name>Choice Button_28</name>
     <pv_name>$(P)CH1:PCFault-SP</pv_name>
->>>>>>> origin/dev
     <x>586</x>
     <y>268</y>
     <width>58</width>
     <height>68</height>
-<<<<<<< HEAD
-=======
     <background_color>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
@@ -1956,6 +1918,5 @@ Command
       <item>Fault</item>
     </items>
     <items_from_pv>false</items_from_pv>
->>>>>>> origin/dev
   </widget>
 </display>
