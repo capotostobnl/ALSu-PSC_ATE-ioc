@@ -54,7 +54,23 @@
     /epics/base-7.0.9/dbd/asSub.dbd \
     /epics/base-7.0.9/dbd/dbCore.dbd \
     /epics/base-7.0.9/dbd/rsrv.dbd \
-    ../../../dbd/PSCsubs.dbd
+    /epics/support/asyn/dbd/asyn.dbd \
+    /epics/support/asyn/dbd/asynRecord.dbd \
+    /epics/support/asyn/dbd/devEpics.dbd \
+    /epics/support/asyn/dbd/devAsynOctet.dbd \
+    /epics/support/asyn/dbd/devAsynInt32.dbd \
+    /epics/support/asyn/dbd/devAsynXXXArray.dbd \
+    /epics/support/asyn/dbd/devAsynInt32TimeSeries.dbd \
+    /epics/support/asyn/dbd/devAsynUInt32Digital.dbd \
+    /epics/support/asyn/dbd/devAsynFloat64.dbd \
+    /epics/support/asyn/dbd/devAsynFloat64TimeSeries.dbd \
+    /epics/support/asyn/dbd/devAsynRecord.dbd \
+    /epics/support/asyn/dbd/devAsynOctetLs.dbd \
+    /epics/support/asyn/dbd/devAsynInt64.dbd \
+    /epics/support/asyn/dbd/devAsynInt64Array.dbd \
+    /epics/support/asyn/dbd/devAsynInt64TimeSeries.dbd \
+    /epics/support/asyn/dbd/devAsynInt64Misc.dbd \
+    ../../../dbd/drvTester.dbd
 
 /epics/base-7.0.9/dbd/base.dbd:
 /epics/base-7.0.9/dbd/menuGlobal.dbd:
@@ -112,5 +128,21 @@
 /epics/base-7.0.9/dbd/asSub.dbd:
 /epics/base-7.0.9/dbd/dbCore.dbd:
 /epics/base-7.0.9/dbd/rsrv.dbd:
-../../../dbd/PSCsubs.dbd:
+/epics/support/asyn/dbd/asyn.dbd:
+/epics/support/asyn/dbd/asynRecord.dbd:
+/epics/support/asyn/dbd/devEpics.dbd:
+/epics/support/asyn/dbd/devAsynOctet.dbd:
+/epics/support/asyn/dbd/devAsynInt32.dbd:
+/epics/support/asyn/dbd/devAsynXXXArray.dbd:
+/epics/support/asyn/dbd/devAsynInt32TimeSeries.dbd:
+/epics/support/asyn/dbd/devAsynUInt32Digital.dbd:
+/epics/support/asyn/dbd/devAsynFloat64.dbd:
+/epics/support/asyn/dbd/devAsynFloat64TimeSeries.dbd:
+/epics/support/asyn/dbd/devAsynRecord.dbd:
+/epics/support/asyn/dbd/devAsynOctetLs.dbd:
+/epics/support/asyn/dbd/devAsynInt64.dbd:
+/epics/support/asyn/dbd/devAsynInt64Array.dbd:
+/epics/support/asyn/dbd/devAsynInt64TimeSeries.dbd:
+/epics/support/asyn/dbd/devAsynInt64Misc.dbd:
+../../../dbd/drvTester.dbd:
 ../O.Common/PSCtest.dbd: ../Makefile

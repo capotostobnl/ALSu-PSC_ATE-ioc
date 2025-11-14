@@ -17,8 +17,8 @@ extern "C" {
 
 epicsShareExtern typed_rset *pvar_rset_aSubRSET, *pvar_rset_aaiRSET,
     *pvar_rset_aaoRSET, *pvar_rset_aiRSET, *pvar_rset_aoRSET,
-    *pvar_rset_biRSET, *pvar_rset_boRSET, *pvar_rset_calcRSET,
-    *pvar_rset_calcoutRSET, *pvar_rset_compressRSET,
+    *pvar_rset_asynRSET, *pvar_rset_biRSET, *pvar_rset_boRSET,
+    *pvar_rset_calcRSET, *pvar_rset_calcoutRSET, *pvar_rset_compressRSET,
     *pvar_rset_dfanoutRSET, *pvar_rset_eventRSET, *pvar_rset_fanoutRSET,
     *pvar_rset_histogramRSET, *pvar_rset_int64inRSET,
     *pvar_rset_int64outRSET, *pvar_rset_longinRSET,
@@ -34,11 +34,11 @@ typedef int (*rso_func)(dbRecordType *pdbRecordType);
 epicsShareExtern rso_func pvar_func_aSubRecordSizeOffset,
     pvar_func_aaiRecordSizeOffset, pvar_func_aaoRecordSizeOffset,
     pvar_func_aiRecordSizeOffset, pvar_func_aoRecordSizeOffset,
-    pvar_func_biRecordSizeOffset, pvar_func_boRecordSizeOffset,
-    pvar_func_calcRecordSizeOffset, pvar_func_calcoutRecordSizeOffset,
-    pvar_func_compressRecordSizeOffset, pvar_func_dfanoutRecordSizeOffset,
-    pvar_func_eventRecordSizeOffset, pvar_func_fanoutRecordSizeOffset,
-    pvar_func_histogramRecordSizeOffset,
+    pvar_func_asynRecordSizeOffset, pvar_func_biRecordSizeOffset,
+    pvar_func_boRecordSizeOffset, pvar_func_calcRecordSizeOffset,
+    pvar_func_calcoutRecordSizeOffset, pvar_func_compressRecordSizeOffset,
+    pvar_func_dfanoutRecordSizeOffset, pvar_func_eventRecordSizeOffset,
+    pvar_func_fanoutRecordSizeOffset, pvar_func_histogramRecordSizeOffset,
     pvar_func_int64inRecordSizeOffset, pvar_func_int64outRecordSizeOffset,
     pvar_func_longinRecordSizeOffset, pvar_func_longoutRecordSizeOffset,
     pvar_func_lsiRecordSizeOffset, pvar_func_lsoRecordSizeOffset,
@@ -52,11 +52,11 @@ epicsShareExtern rso_func pvar_func_aSubRecordSizeOffset,
     pvar_func_subArrayRecordSizeOffset, pvar_func_waveformRecordSizeOffset;
 
 static const char * const recordTypeNames[] = {
-    "aSub", "aai", "aao", "ai", "ao", "bi", "bo", "calc", "calcout",
-    "compress", "dfanout", "event", "fanout", "histogram", "int64in",
-    "int64out", "longin", "longout", "lsi", "lso", "mbbi", "mbbiDirect",
-    "mbbo", "mbboDirect", "permissive", "printf", "sel", "seq", "state",
-    "stringin", "stringout", "sub", "subArray", "waveform"
+    "aSub", "aai", "aao", "ai", "ao", "asyn", "bi", "bo", "calc",
+    "calcout", "compress", "dfanout", "event", "fanout", "histogram",
+    "int64in", "int64out", "longin", "longout", "lsi", "lso", "mbbi",
+    "mbbiDirect", "mbbo", "mbboDirect", "permissive", "printf", "sel",
+    "seq", "state", "stringin", "stringout", "sub", "subArray", "waveform"
 };
 
 static const recordTypeLocation rtl[] = {
@@ -65,6 +65,7 @@ static const recordTypeLocation rtl[] = {
     {(struct typed_rset *)pvar_rset_aaoRSET, pvar_func_aaoRecordSizeOffset},
     {(struct typed_rset *)pvar_rset_aiRSET, pvar_func_aiRecordSizeOffset},
     {(struct typed_rset *)pvar_rset_aoRSET, pvar_func_aoRecordSizeOffset},
+    {(struct typed_rset *)pvar_rset_asynRSET, pvar_func_asynRecordSizeOffset},
     {(struct typed_rset *)pvar_rset_biRSET, pvar_func_biRecordSizeOffset},
     {(struct typed_rset *)pvar_rset_boRSET, pvar_func_boRecordSizeOffset},
     {(struct typed_rset *)pvar_rset_calcRSET, pvar_func_calcRecordSizeOffset},
@@ -96,90 +97,195 @@ static const recordTypeLocation rtl[] = {
     {(struct typed_rset *)pvar_rset_waveformRSET, pvar_func_waveformRecordSizeOffset}
 };
 
-epicsShareExtern dset *pvar_dset_devAaiSoft, *pvar_dset_devAaoSoft,
+epicsShareExtern dset *pvar_dset_devAaiSoft, *pvar_dset_asynInt8ArrayAai,
+    *pvar_dset_asynInt16ArrayAai, *pvar_dset_asynInt32ArrayAai,
+    *pvar_dset_asynFloat32ArrayAai, *pvar_dset_asynFloat64ArrayAai,
+    *pvar_dset_asynInt64ArrayAai, *pvar_dset_devAaoSoft,
+    *pvar_dset_asynInt8ArrayAao, *pvar_dset_asynInt16ArrayAao,
+    *pvar_dset_asynInt32ArrayAao, *pvar_dset_asynFloat32ArrayAao,
+    *pvar_dset_asynFloat64ArrayAao, *pvar_dset_asynInt64ArrayAao,
     *pvar_dset_devAiSoft, *pvar_dset_devAiSoftRaw,
     *pvar_dset_devAiSoftCallback, *pvar_dset_devTimestampAI,
-    *pvar_dset_devAiGeneralTime, *pvar_dset_devAoSoft,
-    *pvar_dset_devAoSoftRaw, *pvar_dset_devAoSoftCallback,
-    *pvar_dset_devBiSoft, *pvar_dset_devBiSoftRaw,
-    *pvar_dset_devBiSoftCallback, *pvar_dset_devBiDbState,
-    *pvar_dset_devBoSoft, *pvar_dset_devBoSoftRaw,
-    *pvar_dset_devBoSoftCallback, *pvar_dset_devBoGeneralTime,
-    *pvar_dset_devBoDbState, *pvar_dset_devCalcoutSoft,
-    *pvar_dset_devCalcoutSoftCallback, *pvar_dset_devEventSoft,
-    *pvar_dset_devHistogramSoft, *pvar_dset_devI64inSoft,
-    *pvar_dset_devI64inSoftCallback, *pvar_dset_devI64outSoft,
-    *pvar_dset_devI64outSoftCallback, *pvar_dset_devLiSoft,
-    *pvar_dset_devLiSoftCallback, *pvar_dset_devLiGeneralTime,
+    *pvar_dset_devAiGeneralTime, *pvar_dset_asynAiInt32,
+    *pvar_dset_asynAiInt32Average, *pvar_dset_asynAiFloat64,
+    *pvar_dset_asynAiFloat64Average, *pvar_dset_asynAiInt64,
+    *pvar_dset_devAoSoft, *pvar_dset_devAoSoftRaw,
+    *pvar_dset_devAoSoftCallback, *pvar_dset_asynAoInt32,
+    *pvar_dset_asynAoFloat64, *pvar_dset_asynAoInt64,
+    *pvar_dset_asynRecordDevice, *pvar_dset_devBiSoft,
+    *pvar_dset_devBiSoftRaw, *pvar_dset_devBiSoftCallback,
+    *pvar_dset_devBiDbState, *pvar_dset_asynBiInt32,
+    *pvar_dset_asynBiUInt32Digital, *pvar_dset_devBoSoft,
+    *pvar_dset_devBoSoftRaw, *pvar_dset_devBoSoftCallback,
+    *pvar_dset_devBoGeneralTime, *pvar_dset_devBoDbState,
+    *pvar_dset_asynBoInt32, *pvar_dset_asynBoUInt32Digital,
+    *pvar_dset_devCalcoutSoft, *pvar_dset_devCalcoutSoftCallback,
+    *pvar_dset_devEventSoft, *pvar_dset_devHistogramSoft,
+    *pvar_dset_devI64inSoft, *pvar_dset_devI64inSoftCallback,
+    *pvar_dset_asynInt64In, *pvar_dset_devI64outSoft,
+    *pvar_dset_devI64outSoftCallback, *pvar_dset_asynInt64Out,
+    *pvar_dset_devLiSoft, *pvar_dset_devLiSoftCallback,
+    *pvar_dset_devLiGeneralTime, *pvar_dset_asynLiInt32,
+    *pvar_dset_asynLiUInt32Digital, *pvar_dset_asynLiInt64,
     *pvar_dset_devLoSoft, *pvar_dset_devLoSoftCallback,
-    *pvar_dset_devLsiSoft, *pvar_dset_devLsiEnviron,
+    *pvar_dset_asynLoInt32, *pvar_dset_asynLoUInt32Digital,
+    *pvar_dset_asynLoInt64, *pvar_dset_devLsiSoft,
+    *pvar_dset_devLsiEnviron, *pvar_dset_asynLsiOctetCmdResponse,
+    *pvar_dset_asynLsiOctetWriteRead, *pvar_dset_asynLsiOctetRead,
     *pvar_dset_devLsoSoft, *pvar_dset_devLsoSoftCallback,
-    *pvar_dset_devLsoStdio, *pvar_dset_devMbbiSoft,
-    *pvar_dset_devMbbiSoftRaw, *pvar_dset_devMbbiSoftCallback,
-    *pvar_dset_devMbbiDirectSoft, *pvar_dset_devMbbiDirectSoftRaw,
-    *pvar_dset_devMbbiDirectSoftCallback, *pvar_dset_devMbboSoft,
+    *pvar_dset_devLsoStdio, *pvar_dset_asynLsoOctetWrite,
+    *pvar_dset_devMbbiSoft, *pvar_dset_devMbbiSoftRaw,
+    *pvar_dset_devMbbiSoftCallback, *pvar_dset_asynMbbiInt32,
+    *pvar_dset_asynMbbiUInt32Digital, *pvar_dset_devMbbiDirectSoft,
+    *pvar_dset_devMbbiDirectSoftRaw, *pvar_dset_devMbbiDirectSoftCallback,
+    *pvar_dset_asynMbbiDirectUInt32Digital, *pvar_dset_devMbboSoft,
     *pvar_dset_devMbboSoftRaw, *pvar_dset_devMbboSoftCallback,
+    *pvar_dset_asynMbboInt32, *pvar_dset_asynMbboUInt32Digital,
     *pvar_dset_devMbboDirectSoft, *pvar_dset_devMbboDirectSoftRaw,
-    *pvar_dset_devMbboDirectSoftCallback, *pvar_dset_devPrintfSoft,
+    *pvar_dset_devMbboDirectSoftCallback,
+    *pvar_dset_asynMbboDirectUInt32Digital, *pvar_dset_devPrintfSoft,
     *pvar_dset_devPrintfSoftCallback, *pvar_dset_devPrintfStdio,
-    *pvar_dset_devSiSoft, *pvar_dset_devSiSoftCallback,
-    *pvar_dset_devTimestampSI, *pvar_dset_devSiGeneralTime,
-    *pvar_dset_devSiEnviron, *pvar_dset_devSoSoft,
+    *pvar_dset_asynPfOctetWrite, *pvar_dset_devSiSoft,
+    *pvar_dset_devSiSoftCallback, *pvar_dset_devTimestampSI,
+    *pvar_dset_devSiGeneralTime, *pvar_dset_devSiEnviron,
+    *pvar_dset_asynSiOctetCmdResponse, *pvar_dset_asynSiOctetWriteRead,
+    *pvar_dset_asynSiOctetRead, *pvar_dset_devSoSoft,
     *pvar_dset_devSoSoftCallback, *pvar_dset_devSoStdio,
-    *pvar_dset_devSASoft, *pvar_dset_devWfSoft;
+    *pvar_dset_asynSoOctetWrite, *pvar_dset_devSASoft,
+    *pvar_dset_devWfSoft, *pvar_dset_asynWfOctetCmdResponse,
+    *pvar_dset_asynWfOctetWriteRead, *pvar_dset_asynWfOctetRead,
+    *pvar_dset_asynWfOctetWrite, *pvar_dset_asynWfOctetWriteBinary,
+    *pvar_dset_asynInt8ArrayWfIn, *pvar_dset_asynInt8ArrayWfOut,
+    *pvar_dset_asynInt16ArrayWfIn, *pvar_dset_asynInt16ArrayWfOut,
+    *pvar_dset_asynInt32ArrayWfIn, *pvar_dset_asynInt32ArrayWfOut,
+    *pvar_dset_asynFloat32ArrayWfIn, *pvar_dset_asynFloat32ArrayWfOut,
+    *pvar_dset_asynFloat64ArrayWfIn, *pvar_dset_asynFloat64ArrayWfOut,
+    *pvar_dset_asynInt32TimeSeries, *pvar_dset_asynFloat64TimeSeries,
+    *pvar_dset_asynInt64ArrayWfIn, *pvar_dset_asynInt64ArrayWfOut,
+    *pvar_dset_asynInt64TimeSeries;
 
 static const char * const deviceSupportNames[] = {
-    "devAaiSoft", "devAaoSoft", "devAiSoft", "devAiSoftRaw",
-    "devAiSoftCallback", "devTimestampAI", "devAiGeneralTime",
-    "devAoSoft", "devAoSoftRaw", "devAoSoftCallback", "devBiSoft",
-    "devBiSoftRaw", "devBiSoftCallback", "devBiDbState", "devBoSoft",
-    "devBoSoftRaw", "devBoSoftCallback", "devBoGeneralTime",
-    "devBoDbState", "devCalcoutSoft", "devCalcoutSoftCallback",
-    "devEventSoft", "devHistogramSoft", "devI64inSoft",
-    "devI64inSoftCallback", "devI64outSoft", "devI64outSoftCallback",
-    "devLiSoft", "devLiSoftCallback", "devLiGeneralTime", "devLoSoft",
-    "devLoSoftCallback", "devLsiSoft", "devLsiEnviron", "devLsoSoft",
-    "devLsoSoftCallback", "devLsoStdio", "devMbbiSoft", "devMbbiSoftRaw",
-    "devMbbiSoftCallback", "devMbbiDirectSoft", "devMbbiDirectSoftRaw",
-    "devMbbiDirectSoftCallback", "devMbboSoft", "devMbboSoftRaw",
-    "devMbboSoftCallback", "devMbboDirectSoft", "devMbboDirectSoftRaw",
-    "devMbboDirectSoftCallback", "devPrintfSoft", "devPrintfSoftCallback",
-    "devPrintfStdio", "devSiSoft", "devSiSoftCallback", "devTimestampSI",
-    "devSiGeneralTime", "devSiEnviron", "devSoSoft", "devSoSoftCallback",
-    "devSoStdio", "devSASoft", "devWfSoft"
+    "devAaiSoft", "asynInt8ArrayAai", "asynInt16ArrayAai",
+    "asynInt32ArrayAai", "asynFloat32ArrayAai", "asynFloat64ArrayAai",
+    "asynInt64ArrayAai", "devAaoSoft", "asynInt8ArrayAao",
+    "asynInt16ArrayAao", "asynInt32ArrayAao", "asynFloat32ArrayAao",
+    "asynFloat64ArrayAao", "asynInt64ArrayAao", "devAiSoft",
+    "devAiSoftRaw", "devAiSoftCallback", "devTimestampAI",
+    "devAiGeneralTime", "asynAiInt32", "asynAiInt32Average",
+    "asynAiFloat64", "asynAiFloat64Average", "asynAiInt64", "devAoSoft",
+    "devAoSoftRaw", "devAoSoftCallback", "asynAoInt32", "asynAoFloat64",
+    "asynAoInt64", "asynRecordDevice", "devBiSoft", "devBiSoftRaw",
+    "devBiSoftCallback", "devBiDbState", "asynBiInt32",
+    "asynBiUInt32Digital", "devBoSoft", "devBoSoftRaw",
+    "devBoSoftCallback", "devBoGeneralTime", "devBoDbState",
+    "asynBoInt32", "asynBoUInt32Digital", "devCalcoutSoft",
+    "devCalcoutSoftCallback", "devEventSoft", "devHistogramSoft",
+    "devI64inSoft", "devI64inSoftCallback", "asynInt64In",
+    "devI64outSoft", "devI64outSoftCallback", "asynInt64Out", "devLiSoft",
+    "devLiSoftCallback", "devLiGeneralTime", "asynLiInt32",
+    "asynLiUInt32Digital", "asynLiInt64", "devLoSoft",
+    "devLoSoftCallback", "asynLoInt32", "asynLoUInt32Digital",
+    "asynLoInt64", "devLsiSoft", "devLsiEnviron",
+    "asynLsiOctetCmdResponse", "asynLsiOctetWriteRead",
+    "asynLsiOctetRead", "devLsoSoft", "devLsoSoftCallback", "devLsoStdio",
+    "asynLsoOctetWrite", "devMbbiSoft", "devMbbiSoftRaw",
+    "devMbbiSoftCallback", "asynMbbiInt32", "asynMbbiUInt32Digital",
+    "devMbbiDirectSoft", "devMbbiDirectSoftRaw",
+    "devMbbiDirectSoftCallback", "asynMbbiDirectUInt32Digital",
+    "devMbboSoft", "devMbboSoftRaw", "devMbboSoftCallback",
+    "asynMbboInt32", "asynMbboUInt32Digital", "devMbboDirectSoft",
+    "devMbboDirectSoftRaw", "devMbboDirectSoftCallback",
+    "asynMbboDirectUInt32Digital", "devPrintfSoft",
+    "devPrintfSoftCallback", "devPrintfStdio", "asynPfOctetWrite",
+    "devSiSoft", "devSiSoftCallback", "devTimestampSI",
+    "devSiGeneralTime", "devSiEnviron", "asynSiOctetCmdResponse",
+    "asynSiOctetWriteRead", "asynSiOctetRead", "devSoSoft",
+    "devSoSoftCallback", "devSoStdio", "asynSoOctetWrite", "devSASoft",
+    "devWfSoft", "asynWfOctetCmdResponse", "asynWfOctetWriteRead",
+    "asynWfOctetRead", "asynWfOctetWrite", "asynWfOctetWriteBinary",
+    "asynInt8ArrayWfIn", "asynInt8ArrayWfOut", "asynInt16ArrayWfIn",
+    "asynInt16ArrayWfOut", "asynInt32ArrayWfIn", "asynInt32ArrayWfOut",
+    "asynFloat32ArrayWfIn", "asynFloat32ArrayWfOut",
+    "asynFloat64ArrayWfIn", "asynFloat64ArrayWfOut",
+    "asynInt32TimeSeries", "asynFloat64TimeSeries", "asynInt64ArrayWfIn",
+    "asynInt64ArrayWfOut", "asynInt64TimeSeries"
 };
 
 static const dset * const devsl[] = {
-    pvar_dset_devAaiSoft, pvar_dset_devAaoSoft, pvar_dset_devAiSoft,
-    pvar_dset_devAiSoftRaw, pvar_dset_devAiSoftCallback,
-    pvar_dset_devTimestampAI, pvar_dset_devAiGeneralTime,
+    pvar_dset_devAaiSoft, pvar_dset_asynInt8ArrayAai,
+    pvar_dset_asynInt16ArrayAai, pvar_dset_asynInt32ArrayAai,
+    pvar_dset_asynFloat32ArrayAai, pvar_dset_asynFloat64ArrayAai,
+    pvar_dset_asynInt64ArrayAai, pvar_dset_devAaoSoft,
+    pvar_dset_asynInt8ArrayAao, pvar_dset_asynInt16ArrayAao,
+    pvar_dset_asynInt32ArrayAao, pvar_dset_asynFloat32ArrayAao,
+    pvar_dset_asynFloat64ArrayAao, pvar_dset_asynInt64ArrayAao,
+    pvar_dset_devAiSoft, pvar_dset_devAiSoftRaw,
+    pvar_dset_devAiSoftCallback, pvar_dset_devTimestampAI,
+    pvar_dset_devAiGeneralTime, pvar_dset_asynAiInt32,
+    pvar_dset_asynAiInt32Average, pvar_dset_asynAiFloat64,
+    pvar_dset_asynAiFloat64Average, pvar_dset_asynAiInt64,
     pvar_dset_devAoSoft, pvar_dset_devAoSoftRaw,
-    pvar_dset_devAoSoftCallback, pvar_dset_devBiSoft,
+    pvar_dset_devAoSoftCallback, pvar_dset_asynAoInt32,
+    pvar_dset_asynAoFloat64, pvar_dset_asynAoInt64,
+    pvar_dset_asynRecordDevice, pvar_dset_devBiSoft,
     pvar_dset_devBiSoftRaw, pvar_dset_devBiSoftCallback,
-    pvar_dset_devBiDbState, pvar_dset_devBoSoft, pvar_dset_devBoSoftRaw,
-    pvar_dset_devBoSoftCallback, pvar_dset_devBoGeneralTime,
-    pvar_dset_devBoDbState, pvar_dset_devCalcoutSoft,
-    pvar_dset_devCalcoutSoftCallback, pvar_dset_devEventSoft,
-    pvar_dset_devHistogramSoft, pvar_dset_devI64inSoft,
-    pvar_dset_devI64inSoftCallback, pvar_dset_devI64outSoft,
-    pvar_dset_devI64outSoftCallback, pvar_dset_devLiSoft,
-    pvar_dset_devLiSoftCallback, pvar_dset_devLiGeneralTime,
+    pvar_dset_devBiDbState, pvar_dset_asynBiInt32,
+    pvar_dset_asynBiUInt32Digital, pvar_dset_devBoSoft,
+    pvar_dset_devBoSoftRaw, pvar_dset_devBoSoftCallback,
+    pvar_dset_devBoGeneralTime, pvar_dset_devBoDbState,
+    pvar_dset_asynBoInt32, pvar_dset_asynBoUInt32Digital,
+    pvar_dset_devCalcoutSoft, pvar_dset_devCalcoutSoftCallback,
+    pvar_dset_devEventSoft, pvar_dset_devHistogramSoft,
+    pvar_dset_devI64inSoft, pvar_dset_devI64inSoftCallback,
+    pvar_dset_asynInt64In, pvar_dset_devI64outSoft,
+    pvar_dset_devI64outSoftCallback, pvar_dset_asynInt64Out,
+    pvar_dset_devLiSoft, pvar_dset_devLiSoftCallback,
+    pvar_dset_devLiGeneralTime, pvar_dset_asynLiInt32,
+    pvar_dset_asynLiUInt32Digital, pvar_dset_asynLiInt64,
     pvar_dset_devLoSoft, pvar_dset_devLoSoftCallback,
-    pvar_dset_devLsiSoft, pvar_dset_devLsiEnviron, pvar_dset_devLsoSoft,
+    pvar_dset_asynLoInt32, pvar_dset_asynLoUInt32Digital,
+    pvar_dset_asynLoInt64, pvar_dset_devLsiSoft, pvar_dset_devLsiEnviron,
+    pvar_dset_asynLsiOctetCmdResponse, pvar_dset_asynLsiOctetWriteRead,
+    pvar_dset_asynLsiOctetRead, pvar_dset_devLsoSoft,
     pvar_dset_devLsoSoftCallback, pvar_dset_devLsoStdio,
-    pvar_dset_devMbbiSoft, pvar_dset_devMbbiSoftRaw,
-    pvar_dset_devMbbiSoftCallback, pvar_dset_devMbbiDirectSoft,
-    pvar_dset_devMbbiDirectSoftRaw, pvar_dset_devMbbiDirectSoftCallback,
-    pvar_dset_devMbboSoft, pvar_dset_devMbboSoftRaw,
-    pvar_dset_devMbboSoftCallback, pvar_dset_devMbboDirectSoft,
-    pvar_dset_devMbboDirectSoftRaw, pvar_dset_devMbboDirectSoftCallback,
-    pvar_dset_devPrintfSoft, pvar_dset_devPrintfSoftCallback,
-    pvar_dset_devPrintfStdio, pvar_dset_devSiSoft,
+    pvar_dset_asynLsoOctetWrite, pvar_dset_devMbbiSoft,
+    pvar_dset_devMbbiSoftRaw, pvar_dset_devMbbiSoftCallback,
+    pvar_dset_asynMbbiInt32, pvar_dset_asynMbbiUInt32Digital,
+    pvar_dset_devMbbiDirectSoft, pvar_dset_devMbbiDirectSoftRaw,
+    pvar_dset_devMbbiDirectSoftCallback,
+    pvar_dset_asynMbbiDirectUInt32Digital, pvar_dset_devMbboSoft,
+    pvar_dset_devMbboSoftRaw, pvar_dset_devMbboSoftCallback,
+    pvar_dset_asynMbboInt32, pvar_dset_asynMbboUInt32Digital,
+    pvar_dset_devMbboDirectSoft, pvar_dset_devMbboDirectSoftRaw,
+    pvar_dset_devMbboDirectSoftCallback,
+    pvar_dset_asynMbboDirectUInt32Digital, pvar_dset_devPrintfSoft,
+    pvar_dset_devPrintfSoftCallback, pvar_dset_devPrintfStdio,
+    pvar_dset_asynPfOctetWrite, pvar_dset_devSiSoft,
     pvar_dset_devSiSoftCallback, pvar_dset_devTimestampSI,
     pvar_dset_devSiGeneralTime, pvar_dset_devSiEnviron,
-    pvar_dset_devSoSoft, pvar_dset_devSoSoftCallback,
-    pvar_dset_devSoStdio, pvar_dset_devSASoft, pvar_dset_devWfSoft
+    pvar_dset_asynSiOctetCmdResponse, pvar_dset_asynSiOctetWriteRead,
+    pvar_dset_asynSiOctetRead, pvar_dset_devSoSoft,
+    pvar_dset_devSoSoftCallback, pvar_dset_devSoStdio,
+    pvar_dset_asynSoOctetWrite, pvar_dset_devSASoft, pvar_dset_devWfSoft,
+    pvar_dset_asynWfOctetCmdResponse, pvar_dset_asynWfOctetWriteRead,
+    pvar_dset_asynWfOctetRead, pvar_dset_asynWfOctetWrite,
+    pvar_dset_asynWfOctetWriteBinary, pvar_dset_asynInt8ArrayWfIn,
+    pvar_dset_asynInt8ArrayWfOut, pvar_dset_asynInt16ArrayWfIn,
+    pvar_dset_asynInt16ArrayWfOut, pvar_dset_asynInt32ArrayWfIn,
+    pvar_dset_asynInt32ArrayWfOut, pvar_dset_asynFloat32ArrayWfIn,
+    pvar_dset_asynFloat32ArrayWfOut, pvar_dset_asynFloat64ArrayWfIn,
+    pvar_dset_asynFloat64ArrayWfOut, pvar_dset_asynInt32TimeSeries,
+    pvar_dset_asynFloat64TimeSeries, pvar_dset_asynInt64ArrayWfIn,
+    pvar_dset_asynInt64ArrayWfOut, pvar_dset_asynInt64TimeSeries
 };
+
+epicsShareExtern drvet *pvar_drvet_drvAsyn;
+
+static const char *driverSupportNames[] = {
+    "drvAsyn"};
+
+static struct drvet *drvsl[] = {
+    pvar_drvet_drvAsyn};
 
 epicsShareExtern jlif *pvar_jlif_lnkCalcIf, *pvar_jlif_lnkConstIf,
     *pvar_jlif_lnkDebugIf, *pvar_jlif_lnkStateIf, *pvar_jlif_lnkTraceIf;
@@ -192,11 +298,15 @@ static struct jlif *jlifsl[] = {
     pvar_jlif_lnkTraceIf};
 
 typedef void (*reg_func)(void);
-epicsShareExtern reg_func pvar_func_arrInitialize, pvar_func_asSub,
+epicsShareExtern reg_func pvar_func_TesterRegister,
+    pvar_func_arrInitialize, pvar_func_asSub,
+    pvar_func_asynInterposeDelayRegister,
+    pvar_func_asynInterposeEchoRegister,
+    pvar_func_asynInterposeEosRegister,
+    pvar_func_asynInterposeFlushRegister, pvar_func_asynRegister,
     pvar_func_dbndInitialize, pvar_func_decInitialize,
     pvar_func_rsrvRegistrar, pvar_func_syncInitialize,
-    pvar_func_tsInitialize, pvar_func_utagInitialize,
-    pvar_func_register_func_Tester, pvar_func_register_func_Tester2;
+    pvar_func_tsInitialize, pvar_func_utagInitialize;
 
 epicsShareExtern int * const pvar_int_CASDEBUG;
 epicsShareExtern int * const pvar_int_asCaDebug;
@@ -271,17 +381,22 @@ int PSCtest_registerRecordDeviceDriver(DBBASE *pbase)
 
     registerRecordTypes(pbase, NELEMENTS(rtl), recordTypeNames, rtl);
     registerDevices(pbase, NELEMENTS(devsl), deviceSupportNames, devsl);
+    registerDrivers(pbase, NELEMENTS(drvsl), driverSupportNames, drvsl);
     registerJLinks(pbase, NELEMENTS(jlifsl), jlifsl);
+    runRegistrarOnce(pvar_func_TesterRegister);
     runRegistrarOnce(pvar_func_arrInitialize);
     runRegistrarOnce(pvar_func_asSub);
+    runRegistrarOnce(pvar_func_asynInterposeDelayRegister);
+    runRegistrarOnce(pvar_func_asynInterposeEchoRegister);
+    runRegistrarOnce(pvar_func_asynInterposeEosRegister);
+    runRegistrarOnce(pvar_func_asynInterposeFlushRegister);
+    runRegistrarOnce(pvar_func_asynRegister);
     runRegistrarOnce(pvar_func_dbndInitialize);
     runRegistrarOnce(pvar_func_decInitialize);
     runRegistrarOnce(pvar_func_rsrvRegistrar);
     runRegistrarOnce(pvar_func_syncInitialize);
     runRegistrarOnce(pvar_func_tsInitialize);
     runRegistrarOnce(pvar_func_utagInitialize);
-    runRegistrarOnce(pvar_func_register_func_Tester);
-    runRegistrarOnce(pvar_func_register_func_Tester2);
     iocshRegisterVariable(vardefs);
     return 0;
 }

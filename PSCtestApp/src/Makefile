@@ -17,11 +17,15 @@ PSCtest_DBD += base.dbd
 
 # Include dbd files from all support applications:
 #PSCtest_DBD += xxx.dbd
-PSCtest_DBD += PSCsubs.dbd
+PSCtest_DBD += asyn.dbd
+PSCtest_DBD += drvTester.dbd
+
+
 # Add all the support libraries needed by this IOC
 #PSCtest_LIBS += xxx
-PSCtest_SRCS += Tester.c
-PSCtest_SRCS += Tester2.c
+PSCtest_LIBS += asyn
+
+PSCtest_SRCS += drvTester.cpp
 
 # PSCtest_registerRecordDeviceDriver.cpp derives from PSCtest.dbd
 PSCtest_SRCS += PSCtest_registerRecordDeviceDriver.cpp
