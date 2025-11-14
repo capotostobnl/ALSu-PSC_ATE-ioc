@@ -19,6 +19,50 @@ menu(aoOIF) {
     choice(aoOIF_Full, "Full")
     choice(aoOIF_Incremental, "Incremental")
 }
+menu(asynAUTOCONNECT) {
+    choice(asynAUTOCONNECT_noAutoConnect, "noAutoConnect")
+    choice(asynAUTOCONNECT_autoConnect, "autoConnect")
+}
+menu(asynCONNECT) {
+    choice(asynCONNECT_Disconnect, "Disconnect")
+    choice(asynCONNECT_Connect, "Connect")
+}
+menu(asynENABLE) {
+    choice(asynENABLE_Disable, "Disable")
+    choice(asynENABLE_Enable, "Enable")
+}
+menu(asynEOMREASON) {
+    choice(asynEOMREASONNone, "None")
+    choice(asynEOMREASONCNT, "Count")
+    choice(asynEOMREASONEOS, "Eos")
+    choice(asynEOMREASONCNTEOS, "Count Eos")
+    choice(asynEOMREASONEND, "End")
+    choice(asynEOMREASONCNTEND, "Count End")
+    choice(asynEOMREASONEOSEND, "Eos End")
+    choice(asynEOMREASONCNTEOSEND, "Count Eos End")
+}
+menu(asynFMT) {
+    choice(asynFMT_ASCII, "ASCII")
+    choice(asynFMT_Hybrid, "Hybrid")
+    choice(asynFMT_Binary, "Binary")
+}
+menu(asynINTERFACE) {
+    choice(asynINTERFACE_OCTET, "asynOctet")
+    choice(asynINTERFACE_INT32, "asynInt32")
+    choice(asynINTERFACE_UINT32, "asynUInt32Digital")
+    choice(asynINTERFACE_FLOAT64, "asynFloat64")
+}
+menu(asynTMOD) {
+    choice(asynTMOD_Write_Read, "Write/Read")
+    choice(asynTMOD_Write, "Write")
+    choice(asynTMOD_Read, "Read")
+    choice(asynTMOD_Flush, "Flush")
+    choice(asynTMOD_NoIO, "NoI/O")
+}
+menu(asynTRACE) {
+    choice(asynTRACE_Off, "Off")
+    choice(asynTRACE_On, "On")
+}
 menu(bufferingALG) {
     choice(bufferingALG_FIFO, "FIFO Buffer")
     choice(bufferingALG_LIFO, "LIFO Buffer")
@@ -59,11 +103,33 @@ menu(fanoutSELM) {
     choice(fanoutSELM_Specified, "Specified")
     choice(fanoutSELM_Mask, "Mask")
 }
+menu(gpibACMD) {
+    choice(gpibACMD_None, "None")
+    choice(gpibACMD_Group_Execute_Trig___GET_, "Group Execute Trig. (GET)")
+    choice(gpibACMD_Go_To_Local__GTL_, "Go To Local (GTL)")
+    choice(gpibACMD_Selected_Dev__Clear__SDC_, "Selected Dev. Clear (SDC)")
+    choice(gpibACMD_Take_Control__TCT_, "Take Control (TCT)")
+    choice(gpibACMD_Serial_Poll, "Serial Poll")
+}
+menu(gpibUCMD) {
+    choice(gpibUCMD_None, "None")
+    choice(gpibUCMD_Device_Clear__DCL_, "Device Clear (DCL)")
+    choice(gpibUCMD_Local_Lockout__LL0_, "Local Lockout (LL0)")
+    choice(gpibUCMD_Serial_Poll_Disable__SPD_, "Serial Poll Disable (SPD)")
+    choice(gpibUCMD_Serial_Poll_Enable__SPE_, "Serial Poll Enable (SPE)")
+    choice(gpibUCMD_Unlisten__UNL_, "Unlisten (UNL)")
+    choice(gpibUCMD_Untalk__UNT_, "Untalk (UNT)")
+}
 menu(histogramCMD) {
     choice(histogramCMD_Read, "Read")
     choice(histogramCMD_Clear, "Clear")
     choice(histogramCMD_Start, "Start")
     choice(histogramCMD_Stop, "Stop")
+}
+menu(ipDRTO) {
+    choice(ipDRTO_unknown, "Unknown")
+    choice(ipDRTO_No, "No")
+    choice(ipDRTO_Yes, "Yes")
 }
 menu(longoutOOPT) {
     choice(longoutOOPT_Every_Time, "Every Time")
@@ -191,6 +257,57 @@ menu(seqSELM) {
     choice(seqSELM_All, "All")
     choice(seqSELM_Specified, "Specified")
     choice(seqSELM_Mask, "Mask")
+}
+menu(serialBAUD) {
+    choice(serialBAUD_unknown, "Unknown")
+    choice(serialBAUD_300, "300")
+    choice(serialBAUD_600, "600")
+    choice(serialBAUD_1200, "1200")
+    choice(serialBAUD_2400, "2400")
+    choice(serialBAUD_4800, "4800")
+    choice(serialBAUD_9600, "9600")
+    choice(serialBAUD_19200, "19200")
+    choice(serialBAUD_38400, "38400")
+    choice(serialBAUD_57600, "57600")
+    choice(serialBAUD_115200, "115200")
+    choice(serialBAUD_230400, "230400")
+    choice(serialBAUD_460800, "460800")
+    choice(serialBAUD_576000, "576000")
+    choice(serialBAUD_921600, "921600")
+    choice(serialBAUD_1152000, "1152000")
+}
+menu(serialDBIT) {
+    choice(serialDBIT_unknown, "Unknown")
+    choice(serialDBIT_5, "5")
+    choice(serialDBIT_6, "6")
+    choice(serialDBIT_7, "7")
+    choice(serialDBIT_8, "8")
+}
+menu(serialFCTL) {
+    choice(serialFCTL_unknown, "Unknown")
+    choice(serialFCTL_None, "None")
+    choice(serialFCTL_Hardware, "Hardware")
+}
+menu(serialIX) {
+    choice(serialIX_unknown, "Unknown")
+    choice(serialIX_No, "No")
+    choice(serialIX_Yes, "Yes")
+}
+menu(serialMCTL) {
+    choice(serialMCTL_unknown, "Unknown")
+    choice(serialMCTL_CLOCAL, "CLOCAL")
+    choice(serialMCTL_Yes, "YES")
+}
+menu(serialPRTY) {
+    choice(serialPRTY_unknown, "Unknown")
+    choice(serialPRTY_None, "None")
+    choice(serialPRTY_Even, "Even")
+    choice(serialPRTY_Odd, "Odd")
+}
+menu(serialSBIT) {
+    choice(serialSBIT_unknown, "Unknown")
+    choice(serialSBIT_1, "1")
+    choice(serialSBIT_2, "2")
 }
 menu(stringinPOST) {
     choice(stringinPOST_OnChange, "On Change")
@@ -2632,6 +2749,12 @@ recordtype(aai) {
     }
 }
 device(aai, CONSTANT, devAaiSoft, "Soft Channel")
+device(aai, INST_IO, asynInt8ArrayAai, "asynInt8ArrayIn")
+device(aai, INST_IO, asynInt16ArrayAai, "asynInt16ArrayIn")
+device(aai, INST_IO, asynInt32ArrayAai, "asynInt32ArrayIn")
+device(aai, INST_IO, asynFloat32ArrayAai, "asynFloat32ArrayIn")
+device(aai, INST_IO, asynFloat64ArrayAai, "asynFloat64ArrayIn")
+device(aai, INST_IO, asynInt64ArrayAai, "asynInt64ArrayIn")
 recordtype(aao) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -3057,6 +3180,12 @@ recordtype(aao) {
     }
 }
 device(aao, CONSTANT, devAaoSoft, "Soft Channel")
+device(aao, INST_IO, asynInt8ArrayAao, "asynInt8ArrayOut")
+device(aao, INST_IO, asynInt16ArrayAao, "asynInt16ArrayOut")
+device(aao, INST_IO, asynInt32ArrayAao, "asynInt32ArrayOut")
+device(aao, INST_IO, asynFloat32ArrayAao, "asynFloat32ArrayOut")
+device(aao, INST_IO, asynFloat64ArrayAao, "asynFloat64ArrayOut")
+device(aao, INST_IO, asynInt64ArrayAao, "asynInt64ArrayOut")
 recordtype(ai) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -3621,6 +3750,11 @@ device(ai, CONSTANT, devAiSoftRaw, "Raw Soft Channel")
 device(ai, CONSTANT, devAiSoftCallback, "Async Soft Channel")
 device(ai, INST_IO, devTimestampAI, "Soft Timestamp")
 device(ai, INST_IO, devAiGeneralTime, "General Time")
+device(ai, INST_IO, asynAiInt32, "asynInt32")
+device(ai, INST_IO, asynAiInt32Average, "asynInt32Average")
+device(ai, INST_IO, asynAiFloat64, "asynFloat64")
+device(ai, INST_IO, asynAiFloat64Average, "asynFloat64Average")
+device(ai, INST_IO, asynAiInt64, "asynInt64")
 recordtype(ao) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -4232,6 +4366,778 @@ recordtype(ao) {
 device(ao, CONSTANT, devAoSoft, "Soft Channel")
 device(ao, CONSTANT, devAoSoftRaw, "Raw Soft Channel")
 device(ao, CONSTANT, devAoSoftCallback, "Async Soft Channel")
+device(ao, INST_IO, asynAoInt32, "asynInt32")
+device(ao, INST_IO, asynAoFloat64, "asynFloat64")
+device(ao, INST_IO, asynAoInt64, "asynInt64")
+recordtype(asyn) {
+    %#include "epicsTypes.h"
+    %#include "link.h"
+    %#include "epicsMutex.h"
+    %#include "ellLib.h"
+    %#include "devSup.h"
+    %#include "epicsTime.h"
+    field(NAME, DBF_STRING) {
+        size(61)
+        prompt("Record Name")
+        special(SPC_NOMOD)
+    }
+    field(DESC, DBF_STRING) {
+        size(41)
+        prompt("Descriptor")
+        promptgroup("10 - Common")
+    }
+    field(ASG, DBF_STRING) {
+        size(29)
+        prompt("Access Security Group")
+        promptgroup("10 - Common")
+        special(SPC_AS)
+    }
+    field(SCAN, DBF_MENU) {
+        prompt("Scan Mechanism")
+        menu(menuScan)
+        promptgroup("20 - Scan")
+        interest(1)
+        special(SPC_SCAN)
+    }
+    field(PINI, DBF_MENU) {
+        prompt("Process at iocInit")
+        menu(menuPini)
+        promptgroup("20 - Scan")
+        interest(1)
+    }
+    field(PHAS, DBF_SHORT) {
+        prompt("Scan Phase")
+        promptgroup("20 - Scan")
+        interest(1)
+        special(SPC_SCAN)
+    }
+    field(EVNT, DBF_STRING) {
+        size(40)
+        prompt("Event Name")
+        promptgroup("20 - Scan")
+        interest(1)
+        special(SPC_SCAN)
+    }
+    field(TSE, DBF_SHORT) {
+        prompt("Time Stamp Event")
+        promptgroup("20 - Scan")
+        interest(1)
+    }
+    field(TSEL, DBF_INLINK) {
+        prompt("Time Stamp Link")
+        promptgroup("20 - Scan")
+        interest(1)
+    }
+    field(DTYP, DBF_DEVICE) {
+        prompt("Device Type")
+        promptgroup("10 - Common")
+        interest(1)
+    }
+    field(DISV, DBF_SHORT) {
+        initial("1")
+        prompt("Disable Value")
+        promptgroup("20 - Scan")
+    }
+    field(DISA, DBF_SHORT) {
+        prompt("Disable")
+    }
+    field(SDIS, DBF_INLINK) {
+        prompt("Scanning Disable")
+        promptgroup("20 - Scan")
+        interest(1)
+    }
+    field(MLOK, DBF_NOACCESS) {
+        prompt("Monitor lock")
+        extra("epicsMutexId        mlok")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(MLIS, DBF_NOACCESS) {
+        prompt("Monitor List")
+        extra("ELLLIST             mlis")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(BKLNK, DBF_NOACCESS) {
+        prompt("Backwards link tracking")
+        extra("ELLLIST             bklnk")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(DISP, DBF_UCHAR) {
+        prompt("Disable putField")
+        promptgroup("10 - Common")
+        interest(1)
+    }
+    field(PROC, DBF_UCHAR) {
+        pp(TRUE)
+        prompt("Force Processing")
+        interest(3)
+    }
+    field(STAT, DBF_MENU) {
+        initial("UDF")
+        prompt("Alarm Status")
+        menu(menuAlarmStat)
+        special(SPC_NOMOD)
+    }
+    field(SEVR, DBF_MENU) {
+        prompt("Alarm Severity")
+        menu(menuAlarmSevr)
+        special(SPC_NOMOD)
+    }
+    field(AMSG, DBF_STRING) {
+        size(40)
+        prompt("Alarm Message")
+        special(SPC_NOMOD)
+    }
+    field(NSTA, DBF_MENU) {
+        prompt("New Alarm Status")
+        menu(menuAlarmStat)
+        interest(2)
+        special(SPC_NOMOD)
+    }
+    field(NSEV, DBF_MENU) {
+        prompt("New Alarm Severity")
+        menu(menuAlarmSevr)
+        interest(2)
+        special(SPC_NOMOD)
+    }
+    field(NAMSG, DBF_STRING) {
+        size(40)
+        prompt("New Alarm Message")
+        special(SPC_NOMOD)
+    }
+    field(ACKS, DBF_MENU) {
+        prompt("Alarm Ack Severity")
+        menu(menuAlarmSevr)
+        interest(2)
+        special(SPC_NOMOD)
+    }
+    field(ACKT, DBF_MENU) {
+        initial("YES")
+        prompt("Alarm Ack Transient")
+        menu(menuYesNo)
+        promptgroup("70 - Alarm")
+        interest(2)
+        special(SPC_NOMOD)
+    }
+    field(DISS, DBF_MENU) {
+        prompt("Disable Alarm Sevrty")
+        menu(menuAlarmSevr)
+        promptgroup("70 - Alarm")
+        interest(1)
+    }
+    field(LCNT, DBF_UCHAR) {
+        prompt("Lock Count")
+        interest(2)
+        special(SPC_NOMOD)
+    }
+    field(PACT, DBF_UCHAR) {
+        prompt("Record active")
+        interest(1)
+        special(SPC_NOMOD)
+    }
+    field(PUTF, DBF_UCHAR) {
+        prompt("dbPutField process")
+        interest(1)
+        special(SPC_NOMOD)
+    }
+    field(RPRO, DBF_UCHAR) {
+        prompt("Reprocess ")
+        interest(1)
+        special(SPC_NOMOD)
+    }
+    field(ASP, DBF_NOACCESS) {
+        prompt("Access Security Pvt")
+        extra("struct asgMember    *asp")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(PPN, DBF_NOACCESS) {
+        prompt("pprocessNotify")
+        extra("struct processNotify *ppn")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(PPNR, DBF_NOACCESS) {
+        prompt("pprocessNotifyRecord")
+        extra("struct processNotifyRecord *ppnr")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(SPVT, DBF_NOACCESS) {
+        prompt("Scan Private")
+        extra("struct scan_element *spvt")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(RSET, DBF_NOACCESS) {
+        prompt("Address of RSET")
+        extra("struct typed_rset   *rset")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(DSET, DBF_NOACCESS) {
+        prompt("DSET address")
+        extra("unambiguous_dset    *dset")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(DPVT, DBF_NOACCESS) {
+        prompt("Device Private")
+        extra("void                *dpvt")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(RDES, DBF_NOACCESS) {
+        prompt("Address of dbRecordType")
+        extra("struct dbRecordType *rdes")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(LSET, DBF_NOACCESS) {
+        prompt("Lock Set")
+        extra("struct lockRecord   *lset")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(PRIO, DBF_MENU) {
+        prompt("Scheduling Priority")
+        menu(menuPriority)
+        promptgroup("20 - Scan")
+        interest(1)
+        special(SPC_SCAN)
+    }
+    field(TPRO, DBF_UCHAR) {
+        prompt("Trace Processing")
+    }
+    field(BKPT, DBF_NOACCESS) {
+        prompt("Break Point")
+        extra("epicsUInt8          bkpt")
+        interest(1)
+        special(SPC_NOMOD)
+    }
+    field(UDF, DBF_UCHAR) {
+        initial("1")
+        pp(TRUE)
+        prompt("Undefined")
+        promptgroup("10 - Common")
+        interest(1)
+    }
+    field(UDFS, DBF_MENU) {
+        initial("INVALID")
+        prompt("Undefined Alarm Sevrty")
+        menu(menuAlarmSevr)
+        promptgroup("70 - Alarm")
+        interest(1)
+    }
+    field(TIME, DBF_NOACCESS) {
+        prompt("Time")
+        extra("epicsTimeStamp      time")
+        interest(2)
+        special(SPC_NOMOD)
+    }
+    field(UTAG, DBF_UINT64) {
+        prompt("Time Tag")
+        interest(3)
+        special(SPC_NOMOD)
+    }
+    field(FLNK, DBF_FWDLINK) {
+        prompt("Forward Process Link")
+        promptgroup("20 - Scan")
+        interest(1)
+    }
+    field(VAL, DBF_LONG) {
+        prompt("Value field (unused)")
+        asl(ASL0)
+        interest(4)
+    }
+    field(PORT, DBF_STRING) {
+        initial("")
+        prompt("asyn port")
+        special(SPC_MOD)
+        size(40)
+        promptgroup("40 - Input")
+        interest(1)
+    }
+    field(ADDR, DBF_LONG) {
+        initial("0")
+        prompt("asyn address")
+        promptgroup("40 - Input")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(PCNCT, DBF_MENU) {
+        prompt("Port Connect/Disconnect")
+        menu(asynCONNECT)
+        interest(2)
+        special(SPC_MOD)
+    }
+    field(DRVINFO, DBF_STRING) {
+        initial("")
+        prompt("Driver info string")
+        special(SPC_MOD)
+        size(40)
+        promptgroup("40 - Input")
+        interest(2)
+    }
+    field(REASON, DBF_LONG) {
+        prompt("asynUser->reason")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(TMOD, DBF_MENU) {
+        prompt("Transaction mode")
+        menu(asynTMOD)
+        promptgroup("40 - Input")
+        interest(1)
+    }
+    field(TMOT, DBF_DOUBLE) {
+        initial("1.0")
+        prompt("Timeout (sec)")
+        promptgroup("40 - Input")
+        interest(1)
+    }
+    field(IFACE, DBF_MENU) {
+        prompt("Interface")
+        menu(asynINTERFACE)
+        promptgroup("40 - Input")
+        interest(2)
+        special(SPC_MOD)
+    }
+    field(OCTETIV, DBF_LONG) {
+        prompt("asynOctet is valid")
+        interest(2)
+    }
+    field(OPTIONIV, DBF_LONG) {
+        prompt("asynOption is valid")
+        interest(2)
+    }
+    field(GPIBIV, DBF_LONG) {
+        prompt("asynGPIB is valid")
+        interest(2)
+    }
+    field(I32IV, DBF_LONG) {
+        prompt("asynInt32 is valid")
+        interest(2)
+    }
+    field(UI32IV, DBF_LONG) {
+        prompt("asynUInt32Digital is valid")
+        interest(2)
+    }
+    field(F64IV, DBF_LONG) {
+        prompt("asynFloat64 is valid")
+        interest(2)
+    }
+    field(AOUT, DBF_STRING) {
+        size(40)
+        pp(TRUE)
+        prompt("Output (command) string")
+        promptgroup("50 - Output")
+        interest(1)
+    }
+    field(OEOS, DBF_STRING) {
+        size(40)
+        prompt("Output delimiter")
+        promptgroup("50 - Output")
+        special(SPC_MOD)
+        interest(1)
+    }
+    field(BOUT, DBF_CHAR) {
+        pp(TRUE)
+        prompt("Output binary data")
+        special(SPC_DBADDR)
+        interest(1)
+    }
+    field(OPTR, DBF_NOACCESS) {
+        prompt("Output buffer pointer")
+        extra("void *optr")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(OMAX, DBF_LONG) {
+        initial("80")
+        prompt("Max. size of output array")
+        promptgroup("50 - Output")
+        interest(1)
+        special(SPC_NOMOD)
+    }
+    field(NOWT, DBF_LONG) {
+        initial("80")
+        prompt("Number of bytes to write")
+        promptgroup("50 - Output")
+        interest(1)
+    }
+    field(NAWT, DBF_LONG) {
+        prompt("Number of bytes actually written")
+        interest(1)
+    }
+    field(OFMT, DBF_MENU) {
+        prompt("Output format")
+        menu(asynFMT)
+        promptgroup("50 - Output")
+        interest(1)
+    }
+    field(AINP, DBF_STRING) {
+        size(40)
+        prompt("Input (response) string")
+        special(SPC_NOMOD)
+        interest(1)
+    }
+    field(TINP, DBF_STRING) {
+        size(40)
+        prompt("Translated input string")
+        asl(ASL0)
+        special(SPC_NOMOD)
+        interest(1)
+    }
+    field(IEOS, DBF_STRING) {
+        size(40)
+        prompt("Input Delimiter")
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(1)
+    }
+    field(BINP, DBF_CHAR) {
+        prompt("Input binary data")
+        asl(ASL0)
+        special(SPC_DBADDR)
+    }
+    field(IPTR, DBF_NOACCESS) {
+        size(4)
+        prompt("Input buffer pointer")
+        extra("void *iptr")
+        interest(4)
+        special(SPC_NOMOD)
+    }
+    field(IMAX, DBF_LONG) {
+        initial("80")
+        prompt("Max. size of input array")
+        promptgroup("40 - Input")
+        interest(1)
+        special(SPC_NOMOD)
+    }
+    field(NRRD, DBF_LONG) {
+        prompt("Number of bytes to read")
+        promptgroup("40 - Input")
+        interest(1)
+    }
+    field(NORD, DBF_LONG) {
+        prompt("Number of bytes read")
+        interest(1)
+        special(SPC_NOMOD)
+    }
+    field(IFMT, DBF_MENU) {
+        prompt("Input format")
+        menu(asynFMT)
+        promptgroup("40 - Input")
+        interest(1)
+    }
+    field(EOMR, DBF_MENU) {
+        prompt("EOM reason")
+        menu(asynEOMREASON)
+        interest(1)
+        special(SPC_NOMOD)
+    }
+    field(I32INP, DBF_LONG) {
+        prompt("asynInt32 input")
+        interest(2)
+        special(SPC_NOMOD)
+    }
+    field(I32OUT, DBF_LONG) {
+        pp(TRUE)
+        prompt("asynInt32 output")
+        promptgroup("50 - Output")
+        interest(2)
+    }
+    field(UI32INP, DBF_ULONG) {
+        prompt("asynUInt32Digital input")
+        interest(2)
+        special(SPC_NOMOD)
+    }
+    field(UI32OUT, DBF_ULONG) {
+        pp(TRUE)
+        prompt("asynUInt32Digital output")
+        promptgroup("50 - Output")
+        interest(2)
+    }
+    field(UI32MASK, DBF_ULONG) {
+        initial("0xffffffff")
+        prompt("asynUInt32Digital mask")
+        promptgroup("50 - Output")
+        interest(2)
+        special(SPC_MOD)
+    }
+    field(F64INP, DBF_DOUBLE) {
+        prompt("asynFloat64 input")
+        interest(2)
+        special(SPC_NOMOD)
+    }
+    field(F64OUT, DBF_DOUBLE) {
+        pp(TRUE)
+        prompt("asynFloat64 output")
+        promptgroup("50 - Output")
+        interest(2)
+    }
+    field(BAUD, DBF_MENU) {
+        prompt("Baud rate")
+        menu(serialBAUD)
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(LBAUD, DBF_LONG) {
+        prompt("Baud rate")
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(PRTY, DBF_MENU) {
+        prompt("Parity")
+        menu(serialPRTY)
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(DBIT, DBF_MENU) {
+        prompt("Data bits")
+        menu(serialDBIT)
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(SBIT, DBF_MENU) {
+        prompt("Stop bits")
+        menu(serialSBIT)
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(MCTL, DBF_MENU) {
+        prompt("Modem control")
+        menu(serialMCTL)
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(FCTL, DBF_MENU) {
+        prompt("Flow control")
+        menu(serialFCTL)
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(IXON, DBF_MENU) {
+        prompt("Output XON/XOFF")
+        menu(serialIX)
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(IXOFF, DBF_MENU) {
+        prompt("Input XON/XOFF")
+        menu(serialIX)
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(IXANY, DBF_MENU) {
+        prompt("XON=any character")
+        menu(serialIX)
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(HOSTINFO, DBF_STRING) {
+        initial("")
+        prompt("host info")
+        special(SPC_MOD)
+        size(40)
+        promptgroup("40 - Input")
+        interest(1)
+    }
+    field(DRTO, DBF_MENU) {
+        prompt("Disconnect on timeout")
+        menu(ipDRTO)
+        promptgroup("40 - Input")
+        special(SPC_MOD)
+        interest(2)
+    }
+    field(UCMD, DBF_MENU) {
+        pp(TRUE)
+        prompt("Universal command")
+        menu(gpibUCMD)
+        promptgroup("50 - Output")
+        interest(2)
+    }
+    field(ACMD, DBF_MENU) {
+        pp(TRUE)
+        prompt("Addressed command")
+        menu(gpibACMD)
+        promptgroup("50 - Output")
+        interest(2)
+    }
+    field(SPR, DBF_UCHAR) {
+        prompt("Serial poll response")
+        special(SPC_NOMOD)
+        interest(2)
+    }
+    field(TMSK, DBF_LONG) {
+        prompt("Trace mask")
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TB0, DBF_MENU) {
+        prompt("Trace error")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TB1, DBF_MENU) {
+        prompt("Trace IO device")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TB2, DBF_MENU) {
+        prompt("Trace IO filter")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TB3, DBF_MENU) {
+        prompt("Trace IO driver")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TB4, DBF_MENU) {
+        prompt("Trace flow")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TB5, DBF_MENU) {
+        prompt("Trace warning")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TIOM, DBF_LONG) {
+        prompt("Trace I/O mask")
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TIB0, DBF_MENU) {
+        prompt("Trace IO ASCII")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TIB1, DBF_MENU) {
+        prompt("Trace IO escape")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TIB2, DBF_MENU) {
+        prompt("Trace IO hex")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TINM, DBF_LONG) {
+        prompt("Trace Info mask")
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TINB0, DBF_MENU) {
+        prompt("Trace Info Time")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TINB1, DBF_MENU) {
+        prompt("Trace Info Port")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TINB2, DBF_MENU) {
+        prompt("Trace Info Source")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TINB3, DBF_MENU) {
+        prompt("Trace Info Thread")
+        menu(asynTRACE)
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TSIZ, DBF_LONG) {
+        prompt("Trace IO truncate size")
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(TFIL, DBF_STRING) {
+        size(40)
+        prompt("Trace IO file")
+        promptgroup("80 - Display")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(AUCT, DBF_MENU) {
+        prompt("Autoconnect")
+        menu(asynAUTOCONNECT)
+        promptgroup("40 - Input")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(CNCT, DBF_MENU) {
+        prompt("Connect/Disconnect")
+        menu(asynCONNECT)
+        promptgroup("40 - Input")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(ENBL, DBF_MENU) {
+        prompt("Enable/Disable")
+        menu(asynENABLE)
+        promptgroup("40 - Input")
+        interest(1)
+        special(SPC_MOD)
+    }
+    field(ERRS, DBF_NOACCESS) {
+        prompt("Error string")
+        extra("char *errs")
+        interest(4)
+        special(SPC_DBADDR)
+    }
+    field(AQR, DBF_UCHAR) {
+        prompt("Abort queueRequest")
+        interest(4)
+        special(SPC_MOD)
+    }
+}
+device(asyn, INST_IO, asynRecordDevice, "asynRecordDevice")
 recordtype(bi) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -4647,6 +5553,8 @@ device(bi, CONSTANT, devBiSoft, "Soft Channel")
 device(bi, CONSTANT, devBiSoftRaw, "Raw Soft Channel")
 device(bi, CONSTANT, devBiSoftCallback, "Async Soft Channel")
 device(bi, INST_IO, devBiDbState, "Db State")
+device(bi, INST_IO, asynBiInt32, "asynInt32")
+device(bi, INST_IO, asynBiUInt32Digital, "asynUInt32Digital")
 recordtype(bo) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -5108,6 +6016,8 @@ device(bo, CONSTANT, devBoSoftRaw, "Raw Soft Channel")
 device(bo, CONSTANT, devBoSoftCallback, "Async Soft Channel")
 device(bo, INST_IO, devBoGeneralTime, "General Time")
 device(bo, INST_IO, devBoDbState, "Db State")
+device(bo, INST_IO, asynBoInt32, "asynInt32")
+device(bo, INST_IO, asynBoUInt32Digital, "asynUInt32Digital")
 recordtype(calc) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -9027,6 +9937,7 @@ recordtype(int64in) {
 }
 device(int64in, CONSTANT, devI64inSoft, "Soft Channel")
 device(int64in, CONSTANT, devI64inSoftCallback, "Async Soft Channel")
+device(int64in, INST_IO, asynInt64In, "asynInt64")
 recordtype(int64out) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -9517,6 +10428,7 @@ recordtype(int64out) {
 }
 device(int64out, CONSTANT, devI64outSoft, "Soft Channel")
 device(int64out, CONSTANT, devI64outSoftCallback, "Async Soft Channel")
+device(int64out, INST_IO, asynInt64Out, "asynInt64")
 recordtype(longin) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -9985,6 +10897,9 @@ recordtype(longin) {
 device(longin, CONSTANT, devLiSoft, "Soft Channel")
 device(longin, CONSTANT, devLiSoftCallback, "Async Soft Channel")
 device(longin, INST_IO, devLiGeneralTime, "General Time")
+device(longin, INST_IO, asynLiInt32, "asynInt32")
+device(longin, INST_IO, asynLiUInt32Digital, "asynUInt32Digital")
+device(longin, INST_IO, asynLiInt64, "asynInt64")
 recordtype(longout) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -10499,6 +11414,9 @@ recordtype(longout) {
 }
 device(longout, CONSTANT, devLoSoft, "Soft Channel")
 device(longout, CONSTANT, devLoSoftCallback, "Async Soft Channel")
+device(longout, INST_IO, asynLoInt32, "asynInt32")
+device(longout, INST_IO, asynLoUInt32Digital, "asynUInt32Digital")
+device(longout, INST_IO, asynLoInt64, "asynInt64")
 recordtype(lsi) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -10882,6 +11800,9 @@ recordtype(lsi) {
 }
 device(lsi, CONSTANT, devLsiSoft, "Soft Channel")
 device(lsi, INST_IO, devLsiEnviron, "getenv")
+device(lsi, INST_IO, asynLsiOctetCmdResponse, "asynOctetCmdResponse")
+device(lsi, INST_IO, asynLsiOctetWriteRead, "asynOctetWriteRead")
+device(lsi, INST_IO, asynLsiOctetRead, "asynOctetRead")
 recordtype(lso) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -11290,6 +12211,7 @@ recordtype(lso) {
 device(lso, CONSTANT, devLsoSoft, "Soft Channel")
 device(lso, CONSTANT, devLsoSoftCallback, "Async Soft Channel")
 device(lso, INST_IO, devLsoStdio, "stdio")
+device(lso, INST_IO, asynLsoOctetWrite, "asynOctetWrite")
 recordtype(mbbi) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -12090,6 +13012,8 @@ recordtype(mbbi) {
 device(mbbi, CONSTANT, devMbbiSoft, "Soft Channel")
 device(mbbi, CONSTANT, devMbbiSoftRaw, "Raw Soft Channel")
 device(mbbi, CONSTANT, devMbbiSoftCallback, "Async Soft Channel")
+device(mbbi, INST_IO, asynMbbiInt32, "asynInt32")
+device(mbbi, INST_IO, asynMbbiUInt32Digital, "asynUInt32Digital")
 recordtype(mbbiDirect) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -12632,6 +13556,7 @@ recordtype(mbbiDirect) {
 device(mbbiDirect, CONSTANT, devMbbiDirectSoft, "Soft Channel")
 device(mbbiDirect, CONSTANT, devMbbiDirectSoftRaw, "Raw Soft Channel")
 device(mbbiDirect, CONSTANT, devMbbiDirectSoftCallback, "Async Soft Channel")
+device(mbbiDirect, INST_IO, asynMbbiDirectUInt32Digital, "asynUInt32Digital")
 recordtype(mbbo) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -13451,6 +14376,8 @@ recordtype(mbbo) {
 device(mbbo, CONSTANT, devMbboSoft, "Soft Channel")
 device(mbbo, CONSTANT, devMbboSoftRaw, "Raw Soft Channel")
 device(mbbo, CONSTANT, devMbboSoftCallback, "Async Soft Channel")
+device(mbbo, INST_IO, asynMbboInt32, "asynInt32")
+device(mbbo, INST_IO, asynMbboUInt32Digital, "asynUInt32Digital")
 recordtype(mbboDirect) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -14124,6 +15051,7 @@ recordtype(mbboDirect) {
 device(mbboDirect, CONSTANT, devMbboDirectSoft, "Soft Channel")
 device(mbboDirect, CONSTANT, devMbboDirectSoftRaw, "Raw Soft Channel")
 device(mbboDirect, CONSTANT, devMbboDirectSoftCallback, "Async Soft Channel")
+device(mbboDirect, INST_IO, asynMbboDirectUInt32Digital, "asynUInt32Digital")
 recordtype(permissive) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -14808,6 +15736,7 @@ recordtype(printf) {
 device(printf, CONSTANT, devPrintfSoft, "Soft Channel")
 device(printf, CONSTANT, devPrintfSoftCallback, "Async Soft Channel")
 device(printf, INST_IO, devPrintfStdio, "stdio")
+device(printf, INST_IO, asynPfOctetWrite, "asynOctetWrite")
 recordtype(sel) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -16686,6 +17615,9 @@ device(stringin, CONSTANT, devSiSoftCallback, "Async Soft Channel")
 device(stringin, INST_IO, devTimestampSI, "Soft Timestamp")
 device(stringin, INST_IO, devSiGeneralTime, "General Time")
 device(stringin, INST_IO, devSiEnviron, "getenv")
+device(stringin, INST_IO, asynSiOctetCmdResponse, "asynOctetCmdResponse")
+device(stringin, INST_IO, asynSiOctetWriteRead, "asynOctetWriteRead")
+device(stringin, INST_IO, asynSiOctetRead, "asynOctetRead")
 recordtype(stringout) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -17078,6 +18010,7 @@ recordtype(stringout) {
 device(stringout, CONSTANT, devSoSoft, "Soft Channel")
 device(stringout, CONSTANT, devSoSoftCallback, "Async Soft Channel")
 device(stringout, INST_IO, devSoStdio, "stdio")
+device(stringout, INST_IO, asynSoOctetWrite, "asynOctetWrite")
 recordtype(sub) {
     %#include "epicsTypes.h"
     %#include "link.h"
@@ -18463,21 +19396,46 @@ recordtype(waveform) {
     }
 }
 device(waveform, CONSTANT, devWfSoft, "Soft Channel")
+device(waveform, INST_IO, asynWfOctetCmdResponse, "asynOctetCmdResponse")
+device(waveform, INST_IO, asynWfOctetWriteRead, "asynOctetWriteRead")
+device(waveform, INST_IO, asynWfOctetRead, "asynOctetRead")
+device(waveform, INST_IO, asynWfOctetWrite, "asynOctetWrite")
+device(waveform, INST_IO, asynWfOctetWriteBinary, "asynOctetWriteBinary")
+device(waveform, INST_IO, asynInt8ArrayWfIn, "asynInt8ArrayIn")
+device(waveform, INST_IO, asynInt8ArrayWfOut, "asynInt8ArrayOut")
+device(waveform, INST_IO, asynInt16ArrayWfIn, "asynInt16ArrayIn")
+device(waveform, INST_IO, asynInt16ArrayWfOut, "asynInt16ArrayOut")
+device(waveform, INST_IO, asynInt32ArrayWfIn, "asynInt32ArrayIn")
+device(waveform, INST_IO, asynInt32ArrayWfOut, "asynInt32ArrayOut")
+device(waveform, INST_IO, asynFloat32ArrayWfIn, "asynFloat32ArrayIn")
+device(waveform, INST_IO, asynFloat32ArrayWfOut, "asynFloat32ArrayOut")
+device(waveform, INST_IO, asynFloat64ArrayWfIn, "asynFloat64ArrayIn")
+device(waveform, INST_IO, asynFloat64ArrayWfOut, "asynFloat64ArrayOut")
+device(waveform, INST_IO, asynInt32TimeSeries, "asynInt32TimeSeries")
+device(waveform, INST_IO, asynFloat64TimeSeries, "asynFloat64TimeSeries")
+device(waveform, INST_IO, asynInt64ArrayWfIn, "asynInt64ArrayIn")
+device(waveform, INST_IO, asynInt64ArrayWfOut, "asynInt64ArrayOut")
+device(waveform, INST_IO, asynInt64TimeSeries, "asynInt64TimeSeries")
+driver(drvAsyn)
 link(calc, lnkCalcIf)
 link(const, lnkConstIf)
 link(debug, lnkDebugIf)
 link(state, lnkStateIf)
 link(trace, lnkTraceIf)
+registrar(TesterRegister)
 registrar(arrInitialize)
 registrar(asSub)
+registrar(asynInterposeDelayRegister)
+registrar(asynInterposeEchoRegister)
+registrar(asynInterposeEosRegister)
+registrar(asynInterposeFlushRegister)
+registrar(asynRegister)
 registrar(dbndInitialize)
 registrar(decInitialize)
 registrar(rsrvRegistrar)
 registrar(syncInitialize)
 registrar(tsInitialize)
 registrar(utagInitialize)
-function(Tester)
-function(Tester2)
 variable(CASDEBUG, int)
 variable(asCaDebug, int)
 variable(atExitDebug, int)

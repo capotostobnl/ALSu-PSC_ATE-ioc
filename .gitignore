@@ -1,0 +1,7 @@
+O.*
+*.o
+*.d
+*.dbd
+bin/
+dbd/
+.vscode/
