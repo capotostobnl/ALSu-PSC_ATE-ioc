@@ -1,5 +1,0 @@
-epicsEnvSet("IOC","iocPSCtest")
-epicsEnvSet("TOP","/epics/iocs/PSCTest2")
-epicsEnvSet("EPICS_BASE","/epics/base-7.0.8.1")
-epicsEnvSet("PSCDRV","/epics/modules/pscdrv")
-epicsEnvSet("ASYN","/epics/modules/asyn")

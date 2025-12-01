@@ -1,0 +1,3 @@
+# DBD fragment for PSC tester asyn driver
+
+registrar(TesterRegister)

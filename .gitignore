@@ -1,9 +1,7 @@
 O.*
 *.o
 *.d
-*.dbd
 bin/*
-dbd/*
 .vscode/
 *O.*/
 *.iocsh_history

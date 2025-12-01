@@ -6,6 +6,10 @@ include $(TOP)/configure/CONFIG
 # You can replace these wildcards with an explicit list
 DIRS += $(wildcard src* *Src*)
 DIRS += $(wildcard db* *Db*)
+USR_DBDFLAGS += -I$(TOP)/PSCtestApp/dbd
+
+PSCtest_DBD += drvTester.dbd
+PSCtest_DBD += PSCtest.dbd
 
 # If the build order matters, add dependency rules like this,
 # which specifies that xxxSrc must be built after src:
