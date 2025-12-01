@@ -578,22 +578,23 @@ asynStatus TesterDriver::writeFloat64(asynUser* pasynUser, epicsFloat64 value)
     int function = pasynUser->reason;
     char cmd[64] = {0};
 
-    /*if (function == P_Ignd) {
-        if (oldIgnd_ != value) {
+    if (function == P_Ignd) {
+        //if (oldIgnd_ != value) {
             oldIgnd_ = value;
             int igndChan;
             getIntegerParam(P_IgndChan, &igndChan);
             sprintf(cmd, "Ignd%d%4.3f\n", igndChan, value);
-        }
+        //}
         setDoubleParam(P_Ignd, value);
     }
-    else if (function == P_Vgain1) {*/
-    if (function == P_Vgain1) {
+    else if (function == P_Vgain1) {
+        if (function == P_Vgain1) {
         //if (oldVgain1_ != value) {
             oldVgain1_ = value;
             sprintf(cmd, "V1%4.3f\n", value);
         //}
         setDoubleParam(P_Vgain1, value);
+        }
     }
     else if (function == P_Vgain2) {
         //if (oldVgain2_ != value) {
