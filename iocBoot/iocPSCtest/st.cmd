@@ -11,7 +11,7 @@ epicsEnvSet(EPICS_BASE,"/epics/base-7.0.9")
 dbLoadDatabase "../../dbd/PSCtest.dbd"
 PSCtest_registerRecordDeviceDriver(pdbbase)
 
-epicsEnvSet("IPPORT", "10.69.26.3:5000")
+epicsEnvSet("IPPORT", "10.69.26.4:5000")
 
 # ---------------------------
 # Configure asyn tester driver

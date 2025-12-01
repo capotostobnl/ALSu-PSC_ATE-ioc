@@ -2,6 +2,9 @@ O.*
 *.o
 *.d
 *.dbd
-bin/
-dbd/
+bin/*
+dbd/*
 .vscode/
+*O.*/
+*.iocsh_history
+*.local

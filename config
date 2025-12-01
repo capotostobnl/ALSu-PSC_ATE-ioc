@@ -1,4 +1,4 @@
 NAME=PSCTest2
 PORT=4057
 USER=softioc
-HOST=pstester2
+HOST=$HOSTNAME
