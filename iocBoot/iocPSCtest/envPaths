@@ -1,7 +1,5 @@
--include envPaths.local
-
 epicsEnvSet("IOC","iocPSCtest")
 epicsEnvSet("TOP","/epics/iocs/PSCTest2")
-epicsEnvSet("EPICS_BASE","$(EPICS_BASE_DIR)")
-epicsEnvSet("PSCDRV","$(EPICS_SUPPORT_DIR)/pscdrv")
-epicsEnvSet("ASYN","$(EPICS_SUPPORT_DIR)/asyn")
+epicsEnvSet("EPICS_BASE","/epics/base-7.0.8.1")
+epicsEnvSet("PSCDRV","/epics/modules/pscdrv")
+epicsEnvSet("ASYN","/epics/modules/asyn")

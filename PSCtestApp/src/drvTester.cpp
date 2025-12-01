@@ -578,7 +578,7 @@ asynStatus TesterDriver::writeFloat64(asynUser* pasynUser, epicsFloat64 value)
     int function = pasynUser->reason;
     char cmd[64] = {0};
 
-    if (function == P_Ignd) {
+    /*if (function == P_Ignd) {
         if (oldIgnd_ != value) {
             oldIgnd_ = value;
             int igndChan;
@@ -587,67 +587,68 @@ asynStatus TesterDriver::writeFloat64(asynUser* pasynUser, epicsFloat64 value)
         }
         setDoubleParam(P_Ignd, value);
     }
-    else if (function == P_Vgain1) {
-        if (oldVgain1_ != value) {
+    else if (function == P_Vgain1) {*/
+    if (function == P_Vgain1) {
+        //if (oldVgain1_ != value) {
             oldVgain1_ = value;
             sprintf(cmd, "V1%4.3f\n", value);
-        }
+        //}
         setDoubleParam(P_Vgain1, value);
     }
     else if (function == P_Vgain2) {
-        if (oldVgain2_ != value) {
+        //if (oldVgain2_ != value) {
             oldVgain2_ = value;
             sprintf(cmd, "V2%4.3f\n", value);
-        }
+        //}
         setDoubleParam(P_Vgain2, value);
     }
     else if (function == P_Vgain3) {
-        if (oldVgain3_ != value) {
+        //if (oldVgain3_ != value) {
             oldVgain3_ = value;
             sprintf(cmd, "V3%4.3f\n", value);
-        }
+        //}
         setDoubleParam(P_Vgain3, value);
     }
     else if (function == P_Vgain4) {
-        if (oldVgain4_ != value) {
+        //if (oldVgain4_ != value) {
             oldVgain4_ = value;
             sprintf(cmd, "V4%4.3f\n", value);
-        }
+        //}
         setDoubleParam(P_Vgain4, value);
     }
     else if (function == P_Igain1) {
-        if (oldIgain1_ != value) {
+        //if (oldIgain1_ != value) {
             oldIgain1_ = value;
             sprintf(cmd, "I1%4.3f\n", value);
-        }
+        //}
         setDoubleParam(P_Igain1, value);
     }
     else if (function == P_Igain2) {
-        if (oldIgain2_ != value) {
+        //if (oldIgain2_ != value) {
             oldIgain2_ = value;
             sprintf(cmd, "I2%4.3f\n", value);
-        }
+        //}
         setDoubleParam(P_Igain2, value);
     }
     else if (function == P_Igain3) {
-        if (oldIgain3_ != value) {
+        //if (oldIgain3_ != value) {
             oldIgain3_ = value;
             sprintf(cmd, "I3%4.3f\n", value);
-        }
+        //}
         setDoubleParam(P_Igain3, value);
     }
     else if (function == P_Igain4) {
-        if (oldIgain4_ != value) {
+        //if (oldIgain4_ != value) {
             oldIgain4_ = value;
             sprintf(cmd, "I4%4.3f\n", value);
-        }
+        //}
         setDoubleParam(P_Igain4, value);
     }
     else if (function == P_CALDAC) {
-        if (oldCALDAC_ != value) {
+        //if (oldCALDAC_ != value) {
             oldCALDAC_ = value;
             sprintf(cmd, "CALDAC%.6f\n", value);
-        }
+        //}
         setDoubleParam(P_CALDAC, value);
     }
     else {
